@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mens Page</title>
+</head>
+<style>
+    #up{
+        display: flex;
+        justify-content:space-between
+    }
+    #topleft{
+        border: 1px solid black;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+
+    #topright{
+        margin-top: 40px;
+        margin-right: 30px;
+       width: 20%;
+    }
+    #down{
+        display: flex;
+        margin-top: 30px;
+        margin-left: 10px;
+        
+    }
+    #sidebar{
+        border: 1px solid red;
+        margin-top: 10px;
+        height: 60%;
+        width: 10%;
+    }
+    #products{
+        border: 1px solid black;
+    }
+
+
+     .products{
+            display:grid;
+            width:90%;
+            margin: auto;
+            grid-template-columns: repeat(5,1fr);   
+            margin-left: 60px;
+            
+
+        }
+        .products>div{
+            width: 80%;
+            /* width:500px; */
+        }
+        .products img{
+            width:100%;
+
+        }
+</style>
+
+<body>
+    <div id="up">
+    <div id="topleft">
+        <p>Home / Clothing / <b>Mfb Brands</b></p>
+        <h3>Mfb Brands - 7836 items</h3>
+        <h3>FILTERS </h3>
+    </div>
+    <div id="topright">
+        <div id="sortid">
+            <label for="">Sort by:</label>
+            <!-- <select  id="sorting">
+                <option value="low">Low to high</option>
+                <option value="high">High to low</option>
+                <option value="disc">Discount</option>
+            </select> -->
+            <select id="sortNames" onChange="handleNameSort()">
+              <option value="">Sort By Name</option>
+              <option value="asc">Ascending</option>
+              <option value="dsc">Descending</option>
+            </select>
+
+            <select id="sortPrice" onChange="handlePriceSort()">
+              <option value="nil">Sort By Price</option>
+              <option value="HTL">High to Low</option>
+              <option value="LTH">Low to High</option>
+            </select>
+        
+        </div>
+       
+    </div>
+</div>
+
+<div id="down">
+    <div id="sidebar">
+        <label for=""><h4>BRAND</h4></label>
+        <input type="checkbox" class="check" id="roadster">Roadster<span>(2743)</span><br>
+        <input type="checkbox" class="check" id="hrx">HRX<span>(1656)</span><br>
+        <input type="checkbox" class="check" id="wrogn">WROGN<span>(3453)</span><br>
+        <input type="checkbox" class="check" id="h&n">H&N<span>(1343)</span><br>
+        <input type="checkbox" class="check" id="moda">Moda Rapdo<span>(4743)</span><br>
+        <input type="checkbox" class="check" id="harv">Harvard<span>(743)</span><br>
+        <input type="checkbox" class="check" id="clov">Clovia<span>(1143)</span><br>
+
+
+        <label for=""><h4>COLOR</h4></label>
+        <input type="checkbox" class="color" id="rd">Red<span>(743)</span><br>
+        <input type="checkbox" class="color" id="ylw">Yellow<span>(2743)</span><br>
+        <input type="checkbox" class="color" id="grn">Green<span>(2743)</span><br>
+        <input type="checkbox" class="color" id="blu">Blue<span>(2743)</span><br>
+        <input type="checkbox" class="color" id="gry">Grey<span>(2743)</span><br>
+        <input type="checkbox" class="color" id="whit">White<span>(2743)</span><br>
+
+
+
+    </div>
+    <div class="products">
+
+
+    </div>
+</div>
+</body>
+</html>
+<script>
+    
+
+var products_data=[
+
+{
+brand:"Roadster",
+price: "Rs.174 (65%OFF)",
+category: "Men Solid T-Shirt",
+img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/11948288/2022/5/28/feb3d796-d89e-442d-9347-fac07600ac411653728846740-Roadster-Men-Charcoal-Grey-T-shirt-1621653728846289-1.jpg"
+},
+
+{
+    brand: "WROGN",
+    price:"Rs.179 (62%OFF)" ,
+    category: "Time Travlr Round Neck T-Shirt ",
+    img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/2499217/2018/4/26/11524732354101-Roadster-Men-Red-Printed-Round-Neck-T-shirt-3231524732353864-1.jpg"
+    }, 
+    {
+      brand: "HRX",
+    price:"Rs.190 (52%OFF)" ,
+    category: "Man Raw Edge T-Shirt ",
+    img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/2275352/2021/12/16/160f8c3b-7e70-438d-ae50-0e584a5c34681639647173379-Roadster-Men-Black-Raw-Edge-T-shirt-6791639647172958-1.jpg"
+    },  
+    {
+      brand: "HRX",
+    price:"Rs.290 (62%OFF)" ,
+    category: "Man Typography Prnted T-Shirt ",
+    img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/17334104/2022/5/13/36762911-1767-4afc-8bce-911b6e7728d61652439702802-Roadster-Men-Tshirts-5951652439702447-1.jpg"
+    },
+    { 
+      brand:"Roadster",
+     price: "Rs.179 (65%OFF)",
+    category: "Men Roundneck T-Shirt",
+    img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/17333910/2022/5/24/b1501ad6-9026-410b-ab82-84cddf21ffb11653389526713-Roadster-Men-Tshirts-6891653389526119-1.jpg"
+    },  
+    { 
+      brand: "WROGN",
+    price:"Rs.169 (60%OFF)" ,
+    category: "Printed Pure Cotton T-Shirt ",
+    img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/12504412/2020/12/11/5edd7a5a-967e-4c01-8b9d-a640af5385eb1607670111760-Roadster-Men-Mauve-Pure-Cotton-Solid-Round-Neck-T-shirt-8421-1.jpg"
+    },
+    { 
+    brand: "H&M",
+    price:"Rs.199 (66%OFF)"  ,
+    category: "Solid-V-Neck-T-shirt",
+    img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/2499307/2021/2/18/255b3d8b-88b9-41eb-80d4-064333585a4c1613637537864-Roadster-Men-Black-Solid-V-Neck-T-shirt-2821613637536333-1.jpg"
+    },   
+    { 
+      brand: "HRX",
+    price:"Rs.490 (32%OFF)" ,
+    category: "Football Rapid Dry T-Shirt ",
+    img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/15289786/2022/2/24/774572ea-06ad-4abb-a77b-cbee1ac68df21645695529016-HRX-by-Hrithik-Roshan-Men-Tshirts-4131645695528654-5.jpg"
+    },  
+    {
+    brand: "WROGN",
+    price:"Rs.169 (60%OFF)" ,
+    category: "Printed Pure Cotton T-Shirt ",
+    img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/14702968/2021/10/26/28666080-e095-45cd-a81e-2aed8cf287c91635243627476-HRX-by-Hrithik-Roshan-Men-Tshirts-6261635243626971-1.jpg"
+    },
+    {
+      brand: "H&M",
+    price:"Rs.341 (30%OFF)" ,
+    category: "POLYSTER Pure Cotton T-Shirt ",
+    img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/2314424/2018/5/24/16fad75c-35ed-4780-8625-193cc8dae4fc1527173672482-HRX-by-Hrithik-Roshan-Men-Black-Slim-Advanced-Rapid-Dry-Raglan-T-shirt-3541527173669891-1.jpg"
+    }, 
+    {
+      brand: "Clovia",
+    price:"Rs.529 (60%OFF)" ,
+    category: " T-Shirt with bloom ",
+    img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/14457012/2021/6/25/90ec4f2f-0d8e-40e4-9d09-532cb97d2fea1624612957269-WROGN-Men-Tshirts-4191624612956692-1.jpg"
+    },  
+    {
+      brand: "Denim",
+    price:"Rs.119 (22%OFF)" ,
+    category: "Round neck T-Shirt ",
+    img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/14703148/2021/10/30/19dcd94c-68f3-4c10-9fd5-a18eebf578e11635572872146-HRX-by-Hrithik-Roshan-Men-Tshirts-5091635572871696-3.jpg"
+    },
+    { 
+      brand: "Levis",
+    price:"Rs.169 (52%OFF)" ,
+    category: "Gym VestT-Shirt ",
+    img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/11999550/2020/7/31/6cfb955b-db8b-4ad0-8cf9-e77a472a0b0d1596187259473HRXbyHrithikRoshanMenNavyBluePrintedRoundNeckT-shirtTshirtsH1.jpg"
+    },  
+    { 
+      brand: "Reebok",
+    price:"Rs.342 (70%OFF)" ,
+    category: "Printed Pure Cotton T-Shirt ",
+    img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/12156114/2020/10/7/da2ac7f3-e71e-4bbb-a1ea-699fa2d5b5241602061626665-HRX-by-Hrithik-Roshan-Men-Tshirts-9231602061625244-1.jpg"
+    },
+    { 
+      brand: "Woodland",
+    price:"Rs.222 (36%OFF)" ,
+    category: "Football polyster Cotton T-Shirt ",
+    img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/6825469/2018/10/17/6a11fe3f-73b0-43ee-8d48-8de1cb502a411539758421051-HRX-by-Hrithik-Roshan-Men-White-Printed-Round-Neck-T-shirt-9-1.jpg"
+    },   
+    { 
+      brand: "SRX",
+    price:"Rs.122 (61%OFF)" ,
+    category: "Spread collctn Cotton T-Shirt ",
+    img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/11999490/2020/8/6/12c82b8c-45e9-4836-b58f-442f9255f56c1596703031808-HRX-by-Hrithik-Roshan-Men-Tshirts-6701596703028875-1.jpg"
+    },
+    { 
+      brand: "Levis",
+    price:"Rs.174 (34%OFF)" ,
+    category: "Round bottom neck T-Shirt ",
+    img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/15069784/2021/11/2/482b365f-3456-4c30-abba-bd319fa984211635846757911-WROGN-Men-Black-Typography-Printed-Slim-Fit-Casual-T-shirt-4-1.jpg"
+    },
+    { 
+      brand: "Nike",
+    price:"Rs.197 (70%OFF)" ,
+    category: "BRYAN Pure Cotton T-Shirt ",
+    img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/14457002/2021/6/25/0dd5e44c-99a8-4b5a-a692-f0c6517571a41624611460298MensCottonStretchMichaelFitBlueJeansTrunkCalvinKleinUnderwea1.jpg"
+    },   
+    { 
+      brand: "Puma",
+    price:"Rs.169 (60%OFF)" ,
+    category: "Slim Pure Cotton T-Shirt ",
+    img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/13674908/2021/4/10/9924fd91-ceb5-4348-9f33-b815b78c75f01618047301819-WROGN-Men-Tshirts-2611618047300947-1.jpg"
+    },
+    { 
+      brand: "WROGN",
+    price:"Rs.164 (60%OFF)" ,
+    category: "Men Slim Fit Checkered Sp T-Shirt ",
+    img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/2338881/2018/2/23/11519385837836-WROGN-Men-Maroon-Printed-Round-Neck-T-shirt-9981519385837682-1.jpg"
+    },
+    {
+      brand: "HRX",
+    price:"Rs.394 (60%OFF)" ,
+    category: " Fit Graphic Print casual ",
+    img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/15076096/2021/12/3/50e8ca0f-d1fe-41ad-9391-402de52880dd1638509554673-WROGN-Men-Navy-Blue--White-Brand-Logo-Printed-Pure-Cotton-T--1.jpg"
+    },
+    {
+      brand: "Newyork Suits",
+    price:"Rs.261 (60%OFF)" ,
+    category: "VeBNoRn Regular Fit Solid Button Down ",
+    img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/14457012/2021/6/25/90ec4f2f-0d8e-40e4-9d09-532cb97d2fea1624612957269-WROGN-Men-Tshirts-4191624612956692-1.jpg"
+    }, 
+    {
+      brand: "WROGN",
+    price:"Rs.449 (60%OFF)" ,
+    category: "Slim Fit Solid Casual ",
+    img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/15070176/2021/9/13/1e37920a-4e60-454d-b2e6-56ffbfe280e21631518436863-WROGN-Men-Tshirts-5541631518436425-1.jpg"
+    },  
+    {
+      brand: "CLOVIA",
+    price:"Rs.169 (60%OFF)" ,
+    category: "Men Regular Fit Solid Casual Shirt ",
+    img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/13675020/2021/3/17/62853db3-5799-4bdd-bd9f-60c9f92b29731615978461020-WROGN-Men-Tshirts-7631615978460306-1.jpg"
+    },
+    { 
+      brand: "HRX",
+    price:"Rs.521 (20%OFF)" ,
+    category: "VolvO GYM Pure Cotton T-Shirt ",
+    img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/13674914/2021/4/5/b2d377c6-d97b-4709-8be3-8b4b15f876ee1617623422280-WROGN-Men-Tshirts-9431617623421400-1.jpg"
+    },  
+    { 
+      brand: "WROGN",
+    price:"Rs.319 (42%OFF)" ,
+    category: "Gymnasdia Cotton T-Shirt ",
+    img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/10410728/2019/11/11/5e85473d-6094-4bab-bb00-f4b53407c6fa1573450221631-WROGN-Men-Tshirts-41573450219319-1.jpg"
+    },
+    { 
+      brand: "H&M",
+    price:"Rs.169 (60%OFF)" ,
+    category: "Cotton Printed T-Shirt ",
+    img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/10410648/2019/11/11/af04ff18-69d8-45dd-a2eb-15d796a2237f1573449456780-WROGN-Men-Tshirts-6011573449455286-1.jpg"
+    },   
+    { 
+      brand: "Clovia",
+    price:"Rs.289 (20%OFF)" ,
+    category: "Printed  Cotton T-Shirt ",
+    img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/15076546/2021/11/18/4004dc9f-ed54-40ba-babe-a16a3235fb571637232116119RoadsterMenBeigeRegularFitSolidCasualShirtTshirtsWROGNMenTsh1.jpg"
+    },
+    { 
+      brand: "HRX",
+    price:"Rs.419 (70%OFF)" ,
+    category: "Well rounded Cotton T-Shirt ",
+    img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/15069930/2021/10/13/92f51fca-76f3-413b-86e9-ba3d1e78ca891634125275946-WROGN-Men-Tshirts-1371634125275516-1.jpg"
+    },
+    { 
+      brand: "WROGN",
+    price:"Rs.369 (60%OFF)" ,
+    category: "Bottom   Neck T-Shirt ",
+    img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/15076012/2021/11/8/7e57dfc4-e128-4c17-aee6-a63c7f0367e41636347699510-WROGN-Men-Tshirts-7491636347699097-1.jpg"
+    },   
+    { 
+      brand: "Harvard",
+    price:"Rs.269 (40%OFF)" ,
+    category: "Printed Pure V T-Shirt ",
+    img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/15069590/2021/11/9/48ed1190-f9f5-47ca-b2fc-d70f8056b5111636436733580-WROGN-Men-Tshirts-521636436733102-1.jpg"
+    },
+    { 
+      brand: "Clovia",
+    price:"Rs.199 (50%OFF)" ,
+    category: "Cotton Silk T-Shirt ",
+    img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/13674322/2021/11/3/7511a88c-6a11-4d10-99a9-c0defe0ba5df1635914832134-WROGN-Men-Tshirts-3191635914831598-1.jpg"
+    }
+         
+
+
+
+]
+
+
+
+
+
+localStorage.setItem("masai-ecomm",JSON.stringify(products_data));
+
+let cartLSData=JSON.parse(localStorage.getItem("masai-cart")) || [];
+
+var products=document.querySelector(".products");
+var filter=document.querySelector("select");
+
+function display(data){
+
+    products.innerHTML=null;
+
+    data.forEach(function(element){
+
+        var card=document.createElement("div");
+
+        var img=document.createElement("img");
+        img.src = element.img;
+
+        var brand=document.createElement("h2");
+        brand.textContent=element.brand;
+
+        // var desc=document.createElement("p");
+        // desc.textContent=element.name;
+
+        // var category=document.createElement("h3");
+        // category.textContent=element.category;
+
+        var price=document.createElement("h2");
+        price.textContent=element.price;
+
+        var button=document.createElement("button");
+        button.innerText="Add To Wishlist";
+        button.addEventListener("click",function(){
+            AddToWishlist(element);
+        })
+
+        card.append(img,brand,price,button);
+
+
+        products.append(card);
+    });
+
+
+    
+}
+
+display(products_data);
+
+function handleFilter() {
+  var selected = document.getElementById("filterRole").value;
+  console.log(selected);
+  var filtered = products_data.filter(function (element) {
+    return element.category == selected;
+  });
+  console.log(filtered);
+  display(filtered);
+}
+
+function handlePriceSort() {
+  var selected = document.getElementById("sortPrice").value;
+  //console.log(selected);
+  if (selected == "HTL") {
+    products_data.sort(function (a, b) {
+      return b.price - a.price;
+    });
+    // console.log(jobArr);
+    display(products_data);
+  }
+  if (selected == "LTH") {
+    products_data.sort(function (a, b) {
+      return a.price - b.price;
+    });
+    // console.log(jobArr);
+    display(products_data);
+  }
+}
+// document
+//   .querySelector("#sortNames")
+//   .addEventListener("change", handleNameSort);
+function handleNameSort() {
+  var selected = document.getElementById("sortNames").value;
+  //console.log(selected);
+
+  if (selected == "asc") {
+    products_data.sort(function (a, b) {
+      var x = a.brand;
+      var y = b.brand;
+      if (x > y) {
+        return 1;
+      }
+      if (x < y) {
+        return -1;
+      }
+      return 0;
+    });
+    //console.log(products_data);
+    display(products_data);
+  }
+  if (selected == "dsc") {
+    products_data.sort(function (a, b) {
+      var x = a.brand;
+      var y = b.brand;
+      if (x > y) {
+        return -1;
+      }
+      if (x < y) {
+        return 1;
+      }
+      return 0;
+    });
+    //console.log(products_data);
+    display(products_data);
+  }
+}
+
+function AddToWishlist(element){
+    cartLSData.push(element);
+    localStorage.setItem("masai-cart",JSON.stringify(cartLSData));
+    alert("Product added successfully to Wishlist");
+    }
+
+</script>
+</html>
+</script>
