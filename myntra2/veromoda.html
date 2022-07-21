@@ -1470,43 +1470,54 @@ img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progres
 
 
 
-localStorage.setItem("masai-ecomm",JSON.stringify(products_data));
+// localStorage.setItem("masai-ecomm",JSON.stringify(products_data));
 
 let cartLSData=JSON.parse(localStorage.getItem("masai-cart")) || [];
 
-var products=document.querySelector(".products");
+let products=document.querySelector(".products");
 // var filter=document.querySelector("select");
-
+let wishlist=[]
+let cart2=[]
 function display(data){
-
+    
     products.innerHTML=null;
 
     data.forEach(function(element){
 
-        var card=document.createElement("div");
+       let card=document.createElement("div");
 
-        var img=document.createElement("img");
+
+        let img=document.createElement("img");
         img.src = element.img;
 
-        var brand=document.createElement("h4");
+       let brand=document.createElement("h4");
         brand.textContent=element.brand;
 
         // var desc=document.createElement("p");
         // desc.textContent=element.name;
 
-        var category=document.createElement("h5");
+        let category=document.createElement("h5");
         category.textContent=element.category;
 
-        var price=document.createElement("h4");
+        let price=document.createElement("h4");
         price.textContent=element.price;
 
-        var button=document.createElement("button");
+        let button=document.createElement("button");
         button.innerText="Add To Wishlist";
         button.addEventListener("click",function(){
             AddToWishlist(element);
         })
+        card.addEventListener("click",function(){
+            prod(element)
+
+        })
+        function prod(element){
+            wishlist.push(element)
+            localStorage.setItem("wishlist",JSON.stringify(wishlist))
+        }
 
         card.append(img,brand,category,price,button);
+
 
 
         products.append(card);
@@ -1517,6 +1528,7 @@ function display(data){
 }
 
 display(products_data);
+
 
 function handleFilter() {
   var selected = document.getElementById("filterRole").value;
@@ -1586,8 +1598,11 @@ function handleNameSort() {
 }
 
 function AddToWishlist(element){
-    cartLSData.push(element);
-    localStorage.setItem("masai-cart",JSON.stringify(cartLSData));
+    // cartLSData.push(element);
+    cart2.push(element)
+
+            localStorage.setItem("cart2",JSON.stringify(cart2))
+    // localStorage.setItem("masai-cart",JSON.stringify(cartLSData));
     alert("Product added successfully to Wishlist");
     }
 
