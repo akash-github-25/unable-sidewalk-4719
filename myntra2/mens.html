@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mens Page</title>
+</head>
+<style>
+h1{
+    text-align: center;
+}
+#offers{
+    /* border: 1px solid black; */
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(7,1fr);
+}
+#offers>a>img{
+    width: 100%;
+}
+#budget{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(5,1fr)
+}
+#budget>img{
+    width: 100%;
+}
+#brands{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(6,1fr)
+}
+#brands>img{
+    width: 100%;
+}
+#shop{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(6,1fr)
+}
+#shop>img{
+    width: 100%;
+}
+
+#bigimg{
+    width: 100%;
+}
+#bigimg>img{
+    width: 100%;
+}
+#shop2{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    width: 100%;
+}
+#shop2>img{
+    width: 100%;
+}
+
+
+@font-face {
+    font-family: "Whitney";
+    src: url("https://constant.myntassets.com/www/fonts/WhitneyHTF-Book.eot");
+    src: url("https://constant.myntassets.com/www/fonts/WhitneyHTF-Book.eot?#iefix") format("embedded-opentype"),
+       url("https://constant.myntassets.com/www/fonts/WhitneyHTF-Book.woff") format("woff"),
+       url("https://constant.myntassets.com/www/fonts/WhitneyHTF-Book.ttf") format("truetype");
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+ }
+ * {
+    font-family: "Whitney";
+    padding: 0px;
+    margin: 0px;
+ }
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#navbar {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-sizing: border-box;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px, rgba(17, 17, 26, 0.05) 0px 0px 32px;
+
+}
+#navbar label {
+    font-weight: bold;
+}
+
+#navbar a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+#left {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+#left>img {
+    width: 50px;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    margin: 0px 30px 0px 30px;
+}
+
+#left>ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+}
+
+#left>div {
+    padding: 30px 15px;
+    font-size: 13px;
+    cursor: pointer;
+    text-align: center;
+}
+
+#left>div:nth-child(2):hover {
+    border-bottom: 5px solid red;
+    padding: 30px 15px 25px 15px;
+}
+
+#left>div:nth-child(3):hover {
+    border-bottom: 5px solid #e84393;
+    padding: 30px 15px 25px 15px;
+}
+
+#left>div:nth-child(4):hover {
+    border-bottom: 5px solid rgb(255, 123, 0);
+    padding: 30px 15px 25px 15px;
+}
+
+#left>div:nth-child(5):hover {
+    border-bottom: 5px solid #f1c40f;
+    padding: 30px 15px 25px 15px;
+}
+
+#left>div:nth-child(6):hover {
+    border-bottom: 5px solid #00b894;
+    padding: 30px 15px 25px 15px;
+}
+
+#left>div:nth-child(7):hover {
+    border-bottom: 5px solid orangered;
+    padding: 30px 15px 25px 15px;
+}
+
+#subMenu {
+    display: none;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+#subMenu li {
+    list-style: none;
+    text-align: left;
+    line-height: 25px;
+    color: gray;
+}
+
+#subMenu ul {
+    display: flex;
+    padding: 0px 10px;
+}
+
+#subMenu ul>div {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding: 10px 20px;
+
+}
+
+.categories {
+    text-align: left;
+    font-size: 12px;
+    color: gray;
+    font-weight: lighter;
+}
+
+.categories p, h3 {
+    margin: 5px 0px;
+}
+.categories p:hover {
+    color: black;
+    font-weight: bold;
+}
+
+.categories hr {
+    width: 180px;
+}
+
+#men:hover #subMenu {
+    display: block;
+    position: absolute;
+    background-color: white;
+    top: 78.2px;
+    left: 100px;
+}
+
+#men .categories h3 {
+    color: red;
+}
+
+#women:hover #subMenu {
+    display: block;
+    position: absolute;
+    background-color: white;
+    top: 78.2px;
+    left: 100px;
+}
+
+#women .categories h3 {
+    color: #e84393;
+}
+
+#kids:hover #subMenu {
+    display: block;
+    position: absolute;
+    background-color: white;
+    top: 78.2px;
+    left: 100px;
+}
+
+#kids .categories h3 {
+    color: rgb(255, 123, 0);
+}
+#homeLiving:hover #subMenu {
+    display: block;
+    position: absolute;
+    background-color: white;
+    top: 78.2px;
+    left: 100px;
+}
+
+#homeLiving .categories h3 {
+    color: #f1c40f;
+}
+
+#beauty:hover #subMenu {
+    display: block;
+    position: absolute;
+    background-color: white;
+    top: 78.2px;
+    left: 100px;
+}
+
+#beauty .categories h3 {
+    color: #00b894;
+}
+
+sup {
+    color: #ff3f6c;
+    font-size: 10px;
+}
+
+#studio:hover #subMenu {
+    display: block;
+    position: absolute;
+    background-color: white;
+    top: 79px;
+    left: 370px;
+
+}
+
+#studio .categories h3 {
+    color: orangered;
+
+}
+
+#studio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#studioBanner {
+    width: 550px;
+    margin: 10px 0px 20px 0px;
+}
+
+#studio button {
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: black;
+    font-weight: bold;
+    background-color: white;
+    border: none;
+    border-radius: 2px;
+    margin: 0px 0px 10px 0px;
+    cursor: pointer;
+}
+
+#studio button span {
+    font-size: 20px;
+}
+
+
+
+
+#right {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#right>div:first-child {
+    width: 50%;
+    padding: 7px 10px;
+    border-radius: 5px;
+    background-color: #f5f5f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px;
+}
+
+#right>div:first-child img {
+    width: 18px;
+}
+
+#right input {
+    width: 80%;
+    border: none;
+    outline: none;
+    padding: 5px;
+    margin-left: 10px;
+    color: #727389;
+    background-color: #f5f5f6;
+}
+
+.rightSideIcons {
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.rightSideIcons>img {
+    width: 20px;
+}
+
+.profile:hover {
+    border-bottom: 5px solid red;
+    padding: 20px 15px 15px 15px;
+}
+
+#signin {
+    display: none;
+    padding: 20px 30px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+#signin h3 {
+    margin: 0px;
+    color: black;
+    font-size: 14px;
+}
+
+#signin p {
+    margin: 0px 0px 10px 0px;
+    color: gray;
+    font-weight: lighter;
+}
+
+#signin li {
+    list-style: none;
+    text-align: left;
+    line-height: 25px;
+    color: gray;
+}
+
+#signin li:hover {
+    color: black;
+    font-weight: bold;
+}
+
+.profile:hover #signin {
+    display: block;
+    position: absolute;
+    background-color: white;
+    top: 78.2px;
+}
+
+#signin button {
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: red;
+    font-weight: bold;
+    background-color: white;
+    border: none;
+    border-radius: 2px;
+    margin: 0px 0px 10px 0px;
+    cursor: pointer;
+}
+
+#signin button:hover {
+    border: 1px solid red;
+    padding: 9px 19px;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 1300px) {
+   
+    #homeLiving {
+        display: none;
+    }
+    #subMenu > ul{
+        width: 600px;
+        overflow: scroll;
+    }
+}
+  /* Medium Screen */
+@media only screen and (min-width: 320px) and (max-width: 1000px) {
+    #left {
+        width: 40%;
+        margin: 0px 10px;
+    }
+    #homeLiving {
+        display: none;
+    }
+    #beauty {
+        display: none;
+    }
+    #studio {
+        display: none;
+    }
+    #right {
+        width: 60%;
+    }
+    
+    #subMenu > ul{
+        width: 500px;
+        overflow: scroll;
+    }
+    
+  }
+
+
+  /* Small Screen */
+  @media only screen and (min-width: 320px) and (max-width: 699px) {
+    #left {
+        width: 40%;
+        margin: 0px 10px;
+    }
+    #kids {
+        display: none;
+    }
+    #homeLiving {
+        display: none;
+    }
+    #beauty {
+        display: none;
+    }
+    #studio {
+        display: none;
+    }
+    #right {
+        width: 40%;
+    }
+    #right > div {
+        display: none;
+    }
+    #subMenu > ul{
+        width: 400px;
+        overflow: scroll;
+    }
+    #right>div:first-child {
+        width: 100%;
+    }
+
+  }
+
+  @media only screen and (min-width: 0px) and (max-width: 500px) {
+   
+    #left {
+        width: 100%;
+    }
+    #kids {
+        display: none;
+    }
+    #homeLiving {
+        display: none;
+    }
+    #beauty {
+        display: none;
+    }
+    #studio {
+        display: none;
+    }
+    #right {
+        display: none;
+    }
+    #subMenu > ul{
+        width: 300px;
+        overflow: scroll;
+    }
+    #subMenu > ul{
+        width: 300px;
+        overflow: scroll;
+    }
+    
+}
+
+
+
+</style>
+
+<body>
+    <!-- <P>NAVBAR HTML StrT</P> -->
+    <div id="navbar">
+        <div id="left">
+           <img src="https://www.bing.com/th?id=OIP.8NGxjoamFPomSTDFDF1LeQHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.25&pid=3.1&rm=2" alt="Myntra_logo" />
+
+           <div id="men">
+              <a href="#">MEN</a>
+              <div id="subMenu">
+                 <ul>
+                    <div class="categories">
+                       <h3>Topwear</h3>
+                       <p>T-Shirts</p>
+                       <p>Casual Shirts</p>
+                       <p>Formal Shirts</p>
+                       <p>Sweatshirts</p>
+                       <p>Sweaters</p>
+                       <p>Jackets</p>
+                       <p>Blazers & Coats</p>
+                       <p>Suits</p>
+                       <p>Rain Jackets</p>
+
+                       <hr />
+
+                       <h3>Indian & Festive Wear</h3>
+                       <p>Kurtas & Kurta Sets</p>
+                       <p>Sherwanis</p>
+                       <p>Nehru Jackets</p>
+                       <p>Dhotis</p>
+                    </div>
+                    <div class="categories">
+                       <h3>Bottomwear</h3>
+                       <p>Jeans</p>
+                       <p>Casual Trousers</p>
+                       <p>Formal Trousers</p>
+                       <p>Shorts</p>
+                       <p>Track Pants & Joggers</p>
+
+                       <hr />
+
+                       <h3>Innerwear & Sleepwear</h3>
+                       <p>Briefs & Trunks</p>
+                       <p>Boxers</p>
+                       <p>Vests</p>
+                       <p>Sleepwear & Loungewear</p>
+                       <p>Thermals</p>
+
+                       <hr />
+
+                       <h3>Plus Size</h3>
+                    </div>
+                    <div class="categories">
+                       <h3>Footwear</h3>
+                       <p>Casual Shoes</p>
+                       <p>Sports Shoes</p>
+                       <p>Formal Shoes</p>
+                       <p>Sneakers</p>
+                       <p>Sandals & Floaters</p>
+                       <p>Flip Flops</p>
+                       <p>Socks</p>
+
+                       <hr />
+
+                       <h3>Personal Care & Grooming</h3>
+                       <h3>Sunglasses & Frames</h3>
+                       <h3>Watches</h3>
+                    </div>
+                    <div class="categories">
+                       <h3>Sports & Active Wear</h3>
+                       <p>Sports Shoes</p>
+                       <p>Sports Sandals</p>
+                       <p>Active T-Shirts</p>
+                       <p>Track Pants & Shorts</p>
+                       <p>Tracksuits</p>
+                       <p>Jackets & Sweatshirts</p>
+                       <p>Sports Accessories</p>
+                       <p>Swimwear</p>
+
+                       <hr />
+
+                       <h3>Gadgets</h3>
+                       <p>Smart Wearables</p>
+                       <p>Fitness Gadgets</p>
+                       <p>Headphones</p>
+                       <p>Speakers</p>
+                    </div>
+                    <div class="categories">
+                       <h3>Fasion Accessories</h3>
+                       <p>Wallets</p>
+                       <p>Belts</p>
+                       <p>Perfumes & Body Mists</p>
+                       <p>Trimmers</p>
+                       <p>Deodorants</p>
+                       <p>Ties, Cufflinks & Pocket Squares</p>
+                       <p>Accessory Gift Sets</p>
+                       <p>Caps & Hats</p>
+                       <p>Mufflers, Scarves & Gloves</p>
+                       <p>Phone Cases</p>
+                       <p>Rings & Wristwear</p>
+                       <p>Helmets</p>
+
+                       <hr />
+
+                       <h3>Bags & Backpacks</h3>
+                       <h3>Luggages & Trolleys</h3>
+                    </div>
+                 </ul>
+              </div>
+           </div>
+
+           <div id="women">
+              <a href="#">WOMEN</a>
+              <div id="subMenu">
+                 <ul>
+                    <div class="categories">
+                       <h3>Indian & Fusion Wear</h3>
+
+                       <p>Kurtas & Suits</p>
+                       <p>Kurtis, Tunics & Tops</p>
+                       <p>Sarees</p>
+                       <p>Ethnic Wear</p>
+                       <p>Leggings, Salwars & Churidars</p>
+                       <p>Skirts & Palazzos</p>
+                       <p>Dress Materials</p>
+                       <p>Lehenga Cholis</p>
+                       <p>Dupattas & Shawls</p>
+                       <p>Jackets</p>
+
+                       <hr />
+
+                       <h3>Belts, Scarves & More</h3>
+                       <h3>Watches & Wearables</h3>
+                    </div>
+                    <div class="categories">
+                       <h3>Western Wear</h3>
+
+                       <p>Dresses</p>
+                       <p>Tops</p>
+                       <p>Tshirts</p>
+                       <p>Jeans</p>
+                       <p>Trousers & Capris</p>
+                       <p>Shorts & Skirts</p>
+                       <p>Co-ords</p>
+                       <p>Playsuits</p>
+                       <p>Jumpsuits</p>
+                       <p>Shrugs</p>
+                       <p>Sweaters & Sweatshirts</p>
+                       <p>Jackets & Coats</p>
+                       <p>Blazers & Waistcoats</p>
+
+                       <hr />
+
+                       <h3>Plus Size</h3>
+                    </div>
+                    <div class="categories">
+                       <h3>Maternity</h3>
+
+                       <h3>Sunglasses & Frames</h3>
+                       <h3>Footwear</h3>
+                       <p>Flats</p>
+                       <p>Casual Shoes</p>
+                       <p>Heels</p>
+                       <p>Boots</p>
+                       <p>Sports Shoes & Floaters</p>
+
+                       <hr />
+
+                       <h3>Sports & Active Wear</h3>
+
+                       <p>Clothing</p>
+                       <p>Footwear</p>
+                       <p>Sports Accessories</p>
+                       <p>Sports Equipment</p>
+                    </div>
+                    <div class="categories">
+                       <h3>Lingerie & Sleepwear</h3>
+
+                       <p>Bra</p>
+                       <p>Briefs</p>
+                       <p>Shapewear</p>
+                       <p>Sleepwear & Loungewear</p>
+                       <p>Swimwear</p>
+                       <p>Camisoles & Thermals</p>
+
+                       <hr />
+
+                       <h3>Beauty & Personal Care</h3>
+
+                       <p>Makeup</p>
+                       <p>Skincare</p>
+                       <p>Premium Beauty</p>
+                       <p>Lipsticks</p>
+                       <p>Fragrances</p>
+                    </div>
+                    <div class="categories">
+                       <h3>Gadgets</h3>
+
+                       <p>Smart Wearables</p>
+                       <p>Fitness Gadgets</p>
+                       <p>Headphones</p>
+                       <p>Speakers</p>
+
+                       <hr />
+
+                       <h3>Jewellery</h3>
+
+                       <p>Fashion Jewellery</p>
+                       <p>Fine Jewellery</p>
+                       <p>Earrings</p>
+
+                       <hr />
+
+                       <h3>Backpacks</h3>
+
+                       <h3>Handbags, Bags & Wallets</h3>
+                       <h3>Luggages & Trolleys</h3>
+                    </div>
+                 </ul>
+              </div>
+           </div>
+
+           <div id="kids">
+              <a href="#">KIDS</a>
+              <div id="subMenu">
+                 <ul>
+                    <div class="categories">
+                       <h3>Boys Clothing</h3>
+
+                       <p>T-Shirts</p>
+                       <p>Shirts</p>
+                       <p>Shorts</p>
+                       <p>Jeans</p>
+                       <p>Trousers</p>
+                       <p>Clothing Sets</p>
+                       <p>Ethnic Wear</p>
+                       <p>Track Pants & Pyjamas</p>
+                       <hr />
+                       <p>Jacket & Sweater</p>
+                       <p>Sweatshirts</p>
+                       <p>Party Wear</p>
+                       <p>Innerwear & Thermals</p>
+                       <p>Nightwear & Loungewear</p>
+                       <p>Value Packs</p>
+                    </div>
+                    <div class="categories">
+                       <h3>Girls Clothing</h3>
+
+                       <p>Dresses</p>
+                       <p>TOp5</p>
+                       <p>Tshirts</p>
+                       <p>Clothing Sets</p>
+                       <p>Lehenga choli</p>
+                       <p>Kurta Sets</p>
+                       <p>Party wear</p>
+                       <p>Dungarees & Jumpsuits</p>
+                       <p>Skirts & shorts</p>
+                       <p>Tights & Leggings</p>
+                       <p>Jeans, Trousers & Capris</p>
+                       <hr />
+                       <p>Jacket & Sweater</p>
+                       <p>Sweatshirts</p>
+                       <p>Innerwear & Thermals</p>
+                       <p>Nightwear & Loungewear</p>
+                       <p>Value Packs</p>
+                    </div>
+                    <div class="categories">
+                       <h3>Footwear</h3>
+
+                       <p>Casual Shoes</p>
+                       <p>Flipflops</p>
+                       <p>Sports Shoes</p>
+                       <p>Flats</p>
+                       <p>Sandals</p>
+                       <p>Heels</p>
+                       <p>School Shoes</p>
+                       <p>Socks</p>
+
+                       <hr />
+
+                       <h3>Toys</h3>
+
+                       <p>Learning & Development</p>
+                       <p>Activity Toys</p>
+                       <p>Soft Toys</p>
+                       <p>Action Figure / Play set</p>
+                    </div>
+                    <div class="categories">
+                       <h3>Infants</h3>
+
+                       <p>Bodysuits</p>
+                       <p>Rompers & Sleepsuits</p>
+                       <p>Clothing Sets</p>
+                       <p>Tshirts & Tops</p>
+                       <p>Dresses</p>
+                       <p>Bottom wear</p>
+                       <p>Winter Wear</p>
+                       <p>Innerwear & Sleepwear</p>
+                       <p>Infant Care</p>
+
+                       <hr />
+
+                       <h3>Home & Bath</h3>
+
+                       <h3>Personal Care</h3>
+                    </div>
+                    <div class="categories">
+                       <h3>Kids Accessories</h3>
+
+                       <p>Bags & Backpacks</p>
+                       <p>Watches</p>
+                       <p>Jewellery & Hair accessory</p>
+                       <p>Sunglasses</p>
+                       <p>Masks & Protective Gears</p>
+                       <p>Caps & Hats</p>
+
+                       <hr />
+
+                       <h3>Brands</h3>
+
+                       <p>H&M</p>
+                       <p>Max Kids</p>
+                       <p>Pantaloons</p>
+                       <p>United Colors Of Benetton Kids</p>
+                       <p>US Polo Assn. Kids</p>
+                       <p>Mothercare</p>
+                       <p>HRX</p>
+                    </div>
+                 </ul>
+              </div>
+           </div>
+
+           <div id="homeLiving">
+              <a href="#">HOME & LIVING</a>
+              <div id="subMenu">
+                 <ul>
+                    <div class="categories">
+                       <h3>Bed Linen a Furnishing</h3>
+
+                       <p>Bed Runners</p>
+                       <p>Mattress Protectors</p>
+                       <p>Bedsheets</p>
+                       <p>Bedding Sets</p>
+                       <p>Blankets Quilts & Dohars</p>
+                       <p>Pillows & Pillow Covers</p>
+                       <p>Bed Covers</p>
+                       <p>Diwan Sets</p>
+                       <p>Chair Pads & Covers</p>
+                       <p>Sofa Covers</p>
+
+                       <hr />
+
+                       <h3>Flooring</h3>
+
+                       <p>Floor Runners</p>
+                       <p>Carpets</p>
+                       <p>Floor Mats & Dhurries</p>
+                       <p>Door Mats</p>
+                    </div>
+                    <div class="categories">
+                       <h3>Bath</h3>
+
+                       <p>Bath Towels</p>
+                       <p>Hand & Face Towels</p>
+                       <p>Beach Towels</p>
+                       <p>Towels Set</p>
+                       <p>Bath Rugs</p>
+                       <p>Bath Robes</p>
+                       <p>Bathroom Accessories</p>
+                       <p>Shower Curtains</p>
+
+                       <hr />
+
+                       <h3>Lamps & Lighting</h3>
+
+                       <p>Floor Lamps</p>
+                       <p>Ceiling Lamps</p>
+                       <p>Table Lamps</p>
+                       <p>Wall Lamps</p>
+                       <p>Outdoor Lamps</p>
+                       <p>String Lights</p>
+                    </div>
+                    <div class="categories">
+                       <h3>Home Décor</h3>
+
+                       <p>Plants & Planters</p>
+                       <p>Aromas & Candles</p>
+                       <p>Clocks</p>
+                       <p>Mirrors</p>
+                       <p>Wall Décor</p>
+                       <p>Festive Decor</p>
+                       <p>Pooja Essentials</p>
+                       <p>Wall Shelves</p>
+                       <p>Fountains</p>
+                       <p>Showpieces & Vases</p>
+                       <p>Ottoman</p>
+
+                       <hr />
+
+                       <h3>Cushions & Cushion Covers</h3>
+                       <h3>Curtains</h3>
+                    </div>
+                    <div class="categories">
+                       <h3>Home Gift Sets</h3>
+
+                       <h3>Kitchen & Table</h3>
+
+                       <p>Table Runners</p>
+                       <p>Dinnerware & Serveware</p>
+                       <p>Cups and Mugs</p>
+                       <p>Bakeware & Cookware</p>
+                       <p>Kitchen Storage & Tools</p>
+                       <p>Bar & Drinkware</p>
+                       <p>Table Covers & Furnishings</p>
+
+                       <hr />
+
+                       <p>Storage</p>
+
+                       <p>Bins</p>
+                       <p>Hangers</p>
+                       <p>Organisers</p>
+                       <p>Hooks & Holders</p>
+                       <p>Laundry Bags</p>
+                    </div>
+                    <div class="categories">
+                       <h3>Brands</h3>
+
+                       <p>H&M</p>
+                       <p>Marks & Spencer</p>
+                       <p>Home Centre</p>
+                       <p>Spaces</p>
+                       <p>D'Decor</p>
+                       <p>Story@Home</p>
+                       <p>Pure Home & Living</p>
+                       <p>Swayam</p>
+                       <p>Raymond Home</p>
+                       <p>Maspar</p>
+                       <p>Trident</p>
+                       <p>Cortina</p>
+                       <p>Random</p>
+                       <p>Ellementry</p>
+                       <p>ROMEE</p>
+                       <p>SEJ by Nisha Gupta</p>
+                    </div>
+                 </ul>
+              </div>
+           </div>
+
+           <div id="beauty">
+              <a href="#">BEAUTY</a>
+              <div id="subMenu">
+                 <ul>
+                    <div class="categories">
+                       <h3>Makeup</h3>
+
+                       <p>Lipstick</p>
+                       <p>Lip Gloss</p>
+                       <p>Lip Liner</p>
+                       <hr />
+                       <p>Mascara</p>
+                       <p>Eyeliner</p>
+                       <p>Kajal</p>
+                       <p>Eyeshadow</p>
+                       <p>Foundation</p>
+                       <p>Primer</p>
+                       <p>Concealer</p>
+                       <p>Compact</p>
+                       <p>Nail Polish</p>
+                    </div>
+                    <div class="categories">
+                       <h3>Skincare, Bath & Body</h3>
+
+                       <p>Face Moisturiser</p>
+                       <p>Cleanser</p>
+                       <p>Masks & Peel</p>
+                       <p>Sunscreen</p>
+                       <p>Serum</p>
+                       <p>Face Wash</p>
+                       <p>Eye Cream</p>
+                       <p>Lip Balm</p>
+                       <p>Body Lotion</p>
+                       <p>Body Wash</p>
+                       <p>Body Scrub</p>
+                       <p>Hand Cream</p>
+
+                       <hr />
+
+                       <h3>Baby Care</h3>
+                       <h3>Masks</h3>
+                    </div>
+                    <div class="categories">
+                       <h3>Haircare</h3>
+
+                       <p>Shampoo</p>
+                       <p>Conditioner</p>
+                       <p>Hair Cream</p>
+                       <p>Hair Oil</p>
+                       <p>Hair Gel</p>
+                       <p>Hair Color</p>
+                       <p>Hair Serum</p>
+                       <p>Hair Accessory</p>
+
+                       <hr />
+
+                       <h3>Fragrances</h3>
+
+                       <p>Perfume</p>
+                       <p>Deodorant</p>
+                       <p>Body Mist</p>
+                    </div>
+                    <div class="categories">
+                       <h3>Appliances</h3>
+
+                       <p>Hair Straightener</p>
+                       <p>Hair Dryer</p>
+                       <p>Epilator</p>
+
+                       <hr />
+
+                       <h3>Men's Grooming</h3>
+
+                       <p>Trimmers</p>
+                       <p>Beard Oil</p>
+                       <p>Hair Wax</p>
+
+                       <hr />
+
+                       <h3>Beauty Gift & Makeup Set</h3>
+
+                       <p>Beauty Gift</p>
+                       <p>Makeup Kit</p>
+
+                       <hr />
+
+                       <h3>Premium Beauty</h3>
+                       <h3>Wellness & Hygiene</h3>
+                    </div>
+                    <div class="categories">
+                       <h3>Top Brands</h3>
+
+                       <p>Lakme</p>
+                       <p>Maybelline</p>
+                       <p>LOreal</p>
+                       <p>Philips</p>
+                       <p>Bath & Body Works</p>
+                       <p>THE BODY SHOP</p>
+                       <p>Biotique</p>
+                       <p>Mamaearth</p>
+                       <p>MCaffeine</p>
+                       <p>Nivea</p>
+                       <p>Lotus Herbals</p>
+                       <p>LOreal Professionnel</p>
+                       <hr />
+                       <p>KAMA AYURVEDA</p>
+                       <p>M.A.C</p>
+                       <p>Forest Essentials</p>
+                    </div>
+                 </ul>
+              </div>
+           </div>
+
+           <div id="studio">
+              <a href="#">STUDIO <sup>NEW</sup></a>
+              <div id="subMenu">
+                 <ul id="studio">
+                    <img src="./images/Screenshot (714).png" alt="studio_logo" />
+                    <p>Your daily inspiration for everything fashion</p>
+                    <img id="studioBanner" src="images/sudio-nav-banner.png" alt="nav_banner" />
+                    <button>EXPLORE STUDIO <span>&#8250;</span></button>
+                 </ul>
+              </div>
+           </div>
+        </div>
+
+        <div id="right">
+           <div>
+              <img src="images/search_logo.png" alt="" />
+              <input type="text" placeholder="Search for products, brands and more" />
+           </div>
+           <div class="rightSideIcons profile">
+              <img src="images/profile_logo.png" alt="" />
+              <label for="">Profile</label>
+              <div id="signin">
+                 <ul>
+                    <li>
+                       <h3>Welcome</h3>
+                       <p>To access account and manage orders</p>
+                       <button id="btn" type="submit">LOGIN/SIGNUP</button>
+                    </li>
+                    <hr />
+                    <li>Order</li>
+                    <li>Wishlist</li>
+                    <li>Gift Cards</li>
+                    <li>Contact Us</li>
+                    <li>Myntra Insider</li>
+                    <hr />
+                    <li>Myntra Credit</li>
+                    <li>Coupons</li>
+                    <li>Saved Cards</li>
+                    <li>Saved Addresses</li>
+                 </ul>
+              </div>
+           </div>
+           <div class="rightSideIcons">
+              <img src="images/heart_logo.png" alt="" />
+              <label for="">Wishlist</label>
+           </div>
+           <div class="rightSideIcons bag">
+              <img src="images/shopping_bag_logo.png" alt="" />
+              <label for="">Bag</label>
+           </div>
+        </div>
+     </div>
+    </div>
+
+<!-- <p>NAVBAR HTML END</p> -->
+
+<div id="bigimg">
+    <img  src="https://assets.myntassets.com/w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2022/5/3/e384cb32-690c-4ccf-a6cb-61df36960bb21651599573972-Workwear_Desk.jpg" alt="">
+  </div>
+
+  <h1 >OMG! Offers This Way</h1>
+  <div id="offers">
+    <a href="roadster.html"> <img src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/7/10/7123c8b6-64a2-4e36-bb4a-c3cb4a039ec41657435355383-roadster.jpg" alt=""></a>
+    <a href="roadster.html"><img src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/6/30/7742e089-f42a-4c35-b439-a43b911453a01656560961074-Virat-s_Favourite_picks_Min_50_Off-_Wrogn.jpg" alt=""></a>
+    <a href="roadster.html"> <img src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/7/10/8f66a071-ca97-4547-8767-6054996856a51657435439471-tshirt.jpg" alt=""></a>
+        <a href="roadster.html"><img src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/6/30/fb50131e-27e2-4688-9f44-589febf8fa231656560960157-Jeans_Under_799_-2499-_Roadster-_Harvard_-_More.jpg" alt=""></a>
+            <a href="roadster.html"><img src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/6/30/72f5ea90-c00d-407f-ae91-6052f6094aea1656560960740-Shirts_Min_60-_M-H-_H-N_-_More.jpg" alt=""></a>
+                <a href="roadster.html"><img src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/6/30/2d01f173-6afb-432a-9a3a-e3631b9500ef1656560960389-Myntra_Unique_Casual_Styles_Min_60Off-_Roadster-_KK.jpg" alt=""></a>
+                    <a href="roadster.html"><img src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/6/30/05c38337-d678-46c6-83ef-919901f000c11656560960859-Top_casual_Styles-_Levi-s-_Tommy_Min_40.jpg" alt=""></a>
+</div>
+
+    <h1>Budget Buys</h1>
+
+    <div id="budget">
+        <img src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2022/7/7/bee9751e-a800-49d2-b3c9-83d0a98133461657171557413-BudgetBuys_Innerwear.jpg" alt="">
+        <img src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2022/7/7/d4001b44-bda7-4a96-9586-cc2f93a2171b1657171557420-BudgetBuys_Kurtas_Sets.jpg" alt="">
+        <img src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2022/7/7/f6505a84-c9ad-42e1-9c68-767085cc4fe81657171557392-BudgetBuys_-Loungewear.jpg" alt="">
+        <img src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2022/7/7/51a298f5-78d5-4553-b7fc-a76439a9e0f41657171557443-BudgetBuys_T-Shirts.jpg" alt="">
+        <img src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2022/7/7/55a9f6ba-8d2a-42b0-829d-a9f544b40cdc1657171557399-BudgetBuys_CasualShirts.jpg" alt="">
+        <img src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2022/7/7/99e556a7-2665-4af8-a8cf-312832ab442e1657171557385-BudgetBuys_-Jeans.jpg" alt="">
+        <img src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2022/7/7/133be34f-ba39-4690-9f84-10b3c8cbdc051657171557406-BudgetBuys_FormalShirts.jpg" alt="">
+        <img src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2022/7/7/acadf300-e31c-4494-9909-2dd8478881cf1657171615960-BudgetBuys_Trimmers_Epilators.jpg" alt="">
+        <img src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2022/7/7/16b2b8db-4e31-4c20-b815-3a22e53c17ef1657171532466-BudgetBuys_Belts_Wallets.jpg" alt="">
+        <img src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2022/7/7/a52632e1-2949-467e-9102-c64f362f7a7f1657171646720-BudgetBuys_StylishActivewear.jpg" alt="">
+
+    </div>
+
+    <h1>Brands Everyone Crushing On!</h1>
+
+    <div id="brands">
+        <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2022/7/12/b4180f31-f67a-49e9-b6e7-ad44e6faa6ec1657617600814-_1896574772-2F_693850054-2Fa15de9e6_aa42_4fe4_b255_3a38e6067120-2Fimage_jpeg811567897.jpg" alt="">
+        <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2022/7/12/f3f31e98-f0e0-4e4b-95a4-bba0db1e41b31657617808516-_1896574772-2F_693850054-2Fc130b564_88a0_4971_b7ca_1228ab67eeac-2Fimage_jpeg_41597530.jpg" alt="">
+        <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2022/7/12/3079c780-22c6-4bd6-b29d-43cbfbba1be21657617897979-_1896574772-2F_693850054-2F86980f91_5e4e_4e95_85d7_707c3113a472-2Fimage_jpeg1918254392.jpg" alt="">
+        <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2022/7/12/b1f80425-dba6-4f5d-aaa8-71526744389e1657618019003-2.jpeg" alt="">
+        <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2022/7/11/23672878-8e92-4cbc-981f-63e9432fb38d1657556390689-decathlons.jpg" alt="">
+        <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2022/7/5/396d6034-ae96-4b69-9501-e8a6f59a0e811656992170982-H-M-tiles.jpg" alt="">
+        <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2022/7/12/07bc8d14-d0f9-4666-b602-4cc000260ddf1657604985515-image_jpeg1345943729.jpg" alt="">
+        <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2022/7/12/e9cb61af-bb5c-48d7-b157-08e49eb7fe991657612694490-1.jpeg" alt="">
+        <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2022/7/12/54324cb3-87ea-4e9e-870f-17c51de4216c1657592874549-mvmt-tiles.png" alt="">
+        <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2022/7/11/c37dac04-c8d2-4152-8613-13d081cde7331657556432907-Philips-Day-1-MP-Tile.jpg" alt="">
+        <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2022/7/12/bc0198a1-342d-4b86-bdfd-b330d83d77c81657609834401-3.jpeg" alt="">
+        <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2022/7/12/a5f5f5a6-2fc3-4d41-b2c1-88597774e6451657613768638-2.jpeg" alt="">
+
+    </div>
+
+    <h1>    Shop By Category</h1>
+
+    <div id="shop">
+        <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2022/7/13/73bfa3e2-b491-4155-b5ef-0b34a390517b1657696888646-Shop-by-Category_MP_-Desktop_02.jpg" alt="">
+        <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2022/7/13/331d02fd-6727-49e4-b170-d673ab8bd94e1657696888655-Shop-by-Category_MP_-Desktop_03.jpg" alt="">
+        <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2022/7/13/f64f0b19-a9fa-493f-bcd6-43cbebb6acb91657696888664-Shop-by-Category_MP_-Desktop_04.jpg" alt="">
+        <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2022/7/13/f690ebfc-000a-4fa7-a6bf-35649294b2fc1657696888672-Shop-by-Category_MP_-Desktop_05.jpg" alt="">
+        <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2022/7/13/eb357a9a-7259-40f4-b0b3-a31d617ffa221657696888680-Shop-by-Category_MP_-Desktop_06.jpg" alt="">
+        <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2022/7/13/89ec03ac-efdd-4768-b2a7-504b115e70fa1657696888688-Shop-by-Category_MP_-Desktop_07.jpg" alt="">
+        <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2022/7/13/ae3863dd-1f4f-48af-bf86-5da2b2983ff31657696888695-Shop-by-Category_MP_-Desktop_08.jpg" alt="">
+        <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2022/7/13/b8538ec8-8edb-4871-80a5-eec33c5515b31657696888702-Shop-by-Category_MP_-Desktop_09.jpg" alt="">
+        <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2022/7/13/5f8c2769-7c8f-4e1f-9bb4-f6601e7e59891657696888709-Shop-by-Category_MP_-Desktop_10.jpg" alt="">
+        <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2022/7/13/b52ba55e-e765-4559-95be-0ab33e37a4321657696888715-Shop-by-Category_MP_-Desktop_11.jpg" alt="">
+        <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2022/7/13/c896eecb-f015-465b-9ca1-9d1f996cb85c1657696888723-Shop-by-Category_MP_-Desktop_12.jpg" alt="">
+        <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2022/7/13/a9bd62a5-9532-4dad-9dc2-756e2ca4d78d1657696888730-Shop-by-Category_MP_-Desktop_13.jpg" alt="">
+    </div> 
+
+    <div id="shop2">
+        <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2022/7/13/d41e76af-a0cb-487d-9351-1dce7291b6bc1657696888743-Shop-by-Category_MP_-Desktop_15.jpg" alt="">
+        <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2022/7/13/ee0beb7d-7d12-48d2-ab2d-072ff21d13861657696888751-Shop-by-Category_MP_-Desktop_16.jpg" alt="">
+        <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2022/7/13/0deb74f2-a458-4386-84be-bc087543bb871657696888760-Shop-by-Category_MP_-Desktop_17.jpg" alt="">
+        <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2022/7/13/116f0a8c-f9f1-40cb-a7ea-5a44fefb17261657696888767-Shop-by-Category_MP_-Desktop_18.jpg" alt="">
+    </div>
+       
+       
+    
+</body>  
