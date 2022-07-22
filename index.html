@@ -203,6 +203,31 @@
              height:80%;
              /* margin-right: -140px; */
         }
+        .link {
+        font-weight: bold;
+        color: rgb(83,87,102);
+      }
+      footer {
+        font-size: 13px;
+        color: rgb(155, 149, 148);
+        line-height: 8px;
+        background-color: rgb(250, 251, 252);
+        font-family: sans-serif;
+        white-space: nowrap;
+        margin-left: 80px;
+      }
+     
+      #first {
+        display: flex;
+        gap: 50px;
+        line-height: 20px;
+      }
+      .lgp {
+        line-height: 20px;
+      }
+      .btm {
+        margin-bottom: 35px;
+      }
 
         @font-face {
     font-family: "Whitney";
@@ -680,10 +705,11 @@ sup {
 <body>
     <div id="navbar">
         <div id="left">
-           <img src="images/Myntra_logo.png" alt="Myntra_logo" />
-
+            <!-- <a href=""><img src="images/Myntra_logo.png" alt="Myntra_logo"/> </a> -->
+           <img src="images/Myntra_logo.png" alt="Myntra_logo"/> 
+            
            <div id="men">
-              <a href="#">MEN</a>
+              <a href="../myntra2/mens.html">MEN</a>
               <div id="subMenu">
                  <ul>
                     <div class="categories">
@@ -787,7 +813,7 @@ sup {
            </div>
 
            <div id="women">
-              <a href="#">WOMEN</a>
+              <a href="../myntra2/womens.html">WOMEN</a>
               <div id="subMenu">
                  <ul>
                     <div class="categories">
@@ -1323,7 +1349,516 @@ sup {
         <div id="fifth_container"></div>
         <div id="last_container"></div>
     </div>
-
+    <footer>
+        <div id="first">
+          <div>
+            <p class="link" style ="color:black">ONLINE SHOPPING</p>
+            <br />
+            <p>Men</p>
+            <p>Women</p>
+            <p>Kids</p>
+            <p>Home & Living</p>
+            <p>Beauty</p>
+            <p>Gift Cards</p>
+            <p>Myntra Insider</p>
+            <br />
+            <p class="link" style ="color:black">USEFUL LINKS</p>
+            <br />
+            <p>Blog</p>
+            <p>Careers</p>
+            <p>Site Map</p>
+            <p>Corporate Information</p>
+            <p>Whitehat</p>
+          </div>
+          <div>
+            <p class="link" style ="color:black" >CUSTOMER POLICIES</p>
+            <br />
+            <p>Contact Us</p>
+            <p>FAQ</p>
+            <p>T&C</p>
+            <p>Terms Of Use</p>
+            <p>Track Orders</p>
+            <p>Shipping</p>
+            <p>Cancellation</p>
+            <p>Returns</p>
+            <p>Privacy policy</p>
+            <p>Grievance Officer</p>
+          </div>
+          <div>
+            <p class="link" style ="color:black;margin-left: 40px;">EXPERIENCE MYNTRA APP ON MOBILE</p>
+            <br />
+            <div style="display: flex; gap: 5px;margin-left: 40px;">
+              <a
+                href="https://play.google.com/store/apps/details?id=com.myntra.android"
+              >
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS09vLejaZkZFzPWi3Z-lj8rAL7K7lF5bF7CQY5XX2prZmhgkAUannhw-P5SVRaAjILZA&usqp=CAU"
+                  alt="google play"
+                  style="height: 40px; width: 100%"
+                />
+              </a>
+              <a
+                href="https://apps.apple.com/in/app/myntra-indias-fashion-store/id907394059"
+              >
+                <img
+                  src="http://assets.stickpng.com/images/5a902db97f96951c82922874.png"
+                  alt="App store"
+                  style="height: 40px; width: 100%"
+                />
+              </a>
+            </div>
+            <p class="link" style ="color:black;margin-left: 40px;">KEEP IN TOUCH</p>
+            <br />
+            <div style="display: flex; gap: 5px;margin-left: 40px;">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1yF_4xzCsf8qT3XvzQvbqy5hzJLj4I8f3kI7F-xcbOz0Hk4wBpAtkBLY4O3Srb-zpPKU&usqp=CAU"
+                alt="facebook"
+                style="height: 20px"
+              /><img
+                src="data:image/jpeg;base64,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"
+                alt=""
+                style="height: 20px"
+              /><img
+                src="data:image/png;base64,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"
+                alt=""
+                style="height: 20px"
+              /><img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-wScaJDHp7WGK6SMEtOu_hblf0FpYZS8BxkzNqqCX7MgGKL_zUtv4Ok61CJhai7mQIiQ&usqp=CAU"
+                alt="instagram"
+                style="height: 20px"
+              />
+            </div>
+          </div>
+          <div>
+            <div style="display: flex; gap: 10px;margin-left: 120px;">
+              <img
+                src="https://constant.myntassets.com/web/assets/img/6c3306ca-1efa-4a27-8769-3b69d16948741574602902452-original.png"
+                alt="100% orginal"
+                style="height: 40px; padding-top: 5px"
+              />
+              <p>
+                <strong class="link" style ="color:black;font-size: 19px;">100% ORIGINAL</strong> guarantee <br /><br />
+                for all products at myntra.com
+              </p>
+            </div>
+            <div style="display: flex; gap: 10px;margin-left: 120px;">
+              <img
+                src="https://constant.myntassets.com/web/assets/img/ef05d6ec-950a-4d01-bbfa-e8e5af80ffe31574602902427-30days.png"
+                alt=""
+                style="height: 40px; padding-top: 5px"
+              />
+              <p>
+                <strong class="link" style ="color:black;font-size: 19px;">Return within 30days </strong>of <br /><br />
+                receiving your order
+              </p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <table>
+            <tr>
+              <td style="vertical-align: middle; text-align: center;color:black" class="link">
+                POPULAR_SEARCHES
+              </td>
+              <td style="width: 90%"><hr /></td>
+            </tr>
+          </table>
+          <br /><br />
+          <p class="lgp">
+            Makeup | Dresses For Girls | T-Shirts | Sandals | Headphones| Babydolls
+            | Blazers For Men | Handbags | Ladies Watches| Bags | Sport Shoes |
+            Reebok Shoes |puma <br />
+            Shoes | Boxers | Wallets | Tops | Earrings | Fastrack Watches| Kurtis |
+            Nike | Smart Watches| Titan Watches | Designer Blouse | Gowns | Rings |
+            Cricket Shoes | Forever <br />
+            21 | Eye Makeup | Photo Frames | Punjabi Suits | Bikini | Myntra Fashion
+            Show | Lipstick | Saree |Watches | Dresses | Lehenga | Nike Shoes |
+            Goggles | Bras | Suit |<br />
+            Chinos | Shoes | Adidas Shoes| Woodland Shoes | Jewellery | Designers
+            Sarees
+          </p>
+      
+          <br /><br /><br />
+      
+          <div style="display: flex; justify-content: space-between">
+            <div>
+              <p>
+                In case of any concern,<a
+                  href="https://www.myntra.com/contactus"
+                  style="text-decoration: none; color: blue"
+                  class="link"
+                >
+                  Contact Us
+                </a>
+              </p>
+            </div>
+            <div><p>© 2022 www.myntra.com. All rights reserved.</p></div>
+          </div>
+          <br /><br />
+        </div>
+        <hr />
+        <div style="display: flex; justify-content: space-between">
+          <div>
+            <br /><br />
+            <p class="link" style ="color:black;font-size:15px;font-weight: 1200;">Registered Office Address</p>
+            <br /><br />
+            <p class="lgp">
+              Buildings Alyssa,<br />
+              Begonia and Clover situated in Embassy Tech Village,<br />
+              Outer Ring Road,<br />
+              Devarabeesanahalli Village,<br />
+              Varthur Hobli,<br />
+              Bengaluru – 560103, India
+            </p>
+          </div>
+          <div
+            style="position: absolute; right: 80px; top: 752px; line-height: 10px"
+          >
+            CIN: U72300KA2007PTC041799 <br /><br />
+      
+            Telephone:
+            <a class="link" onclick="cal()" style="color: blue; cursor: pointer"
+              >+91-80-61561999</a
+            >
+            <script>
+              function cal() {
+                alert("Make a Call From Your Phone");
+              }
+            </script>
+          </div>
+        </div>
+        <br />
+        <hr />
+        <br /><br />
+        <div>
+          <p class="link">ONLINE SHOPPING MADE EASY AT MYNTRA</p>
+          <p class="lgp btm">
+            If you would like to experience the best of online shopping for men,
+            women and kids in India, you are at the right place. Myntra is the
+            ultimate destination for fashion and lifestyle, being <br />
+            host to a wide array of merchandise including clothing, footwear,
+            accessories, jewellery, personal care products and more. It is time to
+            redefine your style statement with our treasure-trove <br />
+            of trendy items. Our online store brings you the latest in designer
+            products straight out of fashion houses. You can shop online at Myntra
+            from the comfort of your home and get your <br />
+            favourites delivered right to your doorstep.
+          </p>
+        </div>
+        <div>
+          <p class="link btm">BEST ONLINE SHOPPING SITE IN INDIA FOR FASHION</p>
+          <p class="lgp">
+            Be it clothing, footwear or accessories, Myntra offers you the ideal
+            combination of fashion and functionality for men, women and kids. You
+            will realise that the sky is the limit when it comes <br />
+            to the types of outfits that you can purchase for different occasions.
+          </p>
+          <ol class="lgp">
+            <li style="margin-bottom: 15px">
+              <a class="link">Smart men’s clothing </a> - At Myntra you will find
+              myriad options in smart formal shirts and trousers, cool T-shirts and
+              jeans, or kurta and pyjama combinations for men. Wear your <br />
+              attitude with printed T-shirts. Create the back-to-campus vibe with
+              varsity T-shirts and distressed jeans. Be it gingham, buffalo, or
+              window-pane style, checked shirts are unbeatably <br />
+              smart. Team them up with chinos, cuffed jeans or cropped trousers for
+              a smart casual look. Opt for a stylish layered look with biker
+              jackets. Head out in cloudy weather with courage <br />
+              in water-resistant jackets. Browse through our innerwear section to
+              find supportive garments which would keep you confident in any outfit.
+            </li>
+            <li style="margin-bottom: 15px">
+              <a class="link">Trendy women’s clothing</a>- Online shopping for women
+              at Myntra is a mood-elevating experience. Look hip and stay
+              comfortable with chinos and printed shorts this summer. Look <br />
+              hot on your date dressed in a little black dress, or opt for red
+              dresses for a sassy vibe. Striped dresses and T-shirts represent the
+              classic spirit of nautical fashion. Choose your <br />
+              favourites from among Bardot, off-shoulder, shirt-style, blouson,
+              embroidered and peplum tops, to name a few. Team them up with
+              skinny-fit jeans, skirts or palazzos. Kurtis and <br />
+              jeans make the perfect fusion-wear combination for the cool urbanite.
+              Our grand sarees and lehenga-choli selections are perfect to make an
+              impression at big social events such as <br />
+              weddings. Our salwar-kameez sets, kurtas and Patiala suits make
+              comfortable options for regular wear.
+            </li>
+            <li style="margin-bottom: 15px">
+              <a class="link">Fashionable footwear</a> - While clothes maketh the
+              man, the type of footwear you wear reflects your personality. We bring
+              you an exhaustive lineup of options in casual shoes for <br />
+              men, such as sneakers and loafers. Make a power statement at work
+              dressed in brogues and oxfords. Practice for your marathon with
+              running shoes for men and women. Choose <br />
+              shoes for individual games such as tennis, football, basketball, and
+              the like. Or step into the casual style and comfort offered by
+              sandals, sliders, and flip-flops. Explore our lineup of <br />
+              fashionable footwear for ladies, including pumps, heeled boots,
+              wedge-heels, and pencil-heels. Or enjoy the best of comfort and style
+              with embellished and metallic flats.
+            </li>
+            <li style="margin-bottom: 15px">
+              <a class="link">Stylish accessories</a> - Myntra is one of the best
+              online shopping sites for classy accessories that perfectly complement
+              your outfits. You can select smart analogue or digital watches <br />
+              and match them up with belts and ties. Pick up spacious bags,
+              backpacks, and wallets to store your essentials in style. Whether you
+              prefer minimal jewellery or grand and sparkling <br />
+              pieces, our online jewellery collection offers you many impressive
+              options.
+            </li>
+            <li style="margin-bottom: 15px">
+              <a class="link">Fun and frolic</a> - Online shopping for kids at
+              Myntra is a complete joy. Your little princess is going to love the
+              wide variety of pretty dresses, ballerina shoes, headbands and clips.
+              <br />
+              Delight your son by picking up sports shoes, superhero T-shirts,
+              football jerseys and much more from our online store. Check out our
+              lineup of toys with which you can create <br />
+              memories to cherish.
+            </li>
+            <li style="margin-bottom: 15px">
+              <a class="link">Beauty begins here</a> - You can also refresh,
+              rejuvenate and reveal beautiful skin with personal care, beauty and
+              grooming products from Myntra. Our soaps, shower gels, skin care
+              <br />
+              creams, lotions and other ayurvedic products are specially formulated
+              to reduce the effect of aging and offer the ideal cleansing
+              experience. Keep your scalp clean and your hair <br />
+              uber-stylish with shampoos and hair care products. Choose makeup to
+              enhance your natural beauty.
+            </li>
+          </ol>
+          <p class="lgp btm">
+            Myntra is one of the best online shopping sites in India which could
+            help transform your living spaces completely. Add colour and personality
+            to your bedrooms with bed linen and <br />
+            curtains. Use smart tableware to impress your guest. Wall decor, clocks,
+            photo frames and artificial plants are sure to breathe life into any
+            corner of your home.
+          </p>
+        </div>
+        <div>
+          <p class="link lgp">AFFORDABLE FASHION AT YOUR FINGERTIPS</p>
+          <p class="lgp btm">
+            Myntra is one of the unique online shopping sites in India where fashion
+            is accessible to all. Check out our new arrivals to view the latest
+            designer clothing, footwear and accessories in the <br />
+            market. You can get your hands on the trendiest style every season in
+            western wear. You can also avail the best of ethnic fashion during all
+            Indian festive occasions. You are sure to be <br />
+            impressed with our seasonal discounts on footwear, trousers, shirts,
+            backpacks and more. The end-of-season sale is the ultimate experience
+            when fashion gets unbelievably affordable.
+          </p>
+        </div>
+        <div class="lgp">
+          <p class="link">MYNTRA INSIDER</p>
+          <p>
+            Every online shopping experience is precious. Hence, a cashless
+            reward-based customer loyalty program called Myntra Insider was
+            introduced to enhance your online experience. The <br />
+            program is applicable to every registered customer and measures rewards
+            in the form of Insider Points.
+          </p>
+          <p>
+            There are four levels to achieve in the program, as the Insider Points
+            accumulate. They are - Insider, Select, Elite or Icon. Apart from
+            offering discounts on Myntra and partner platform <br />
+            coupons, each tier comes with its own special perks.
+          </p>
+        </div>
+        <div class="lgp btm">
+          <p class="link">Insider</p>
+          <ul>
+            <li>
+              Opportunity to master any domain in fashion with tips from celebrity
+              stylists at Myntra Masterclass sessions.
+            </li>
+            <li>Curated collections from celeb stylists.</li>
+          </ul>
+          <p class="link">Elite</p>
+          <ul>
+            <li>
+              VIP access to special sale events such as the End of Reason Sale
+              (EORS) and product launches.
+            </li>
+            <li>Exclusive early access to Limited Edition products</li>
+          </ul>
+          <p class="link">Icon</p>
+          <ul>
+            <li>Chance to get on guest lists for special events.</li>
+          </ul>
+        </div>
+        <div class="lgp btm">
+          <p class="link">Chance to get on guest lists for special events.</p>
+          <p>
+            The world wide web is evolving at a relentless pace, and with an
+            accelerated growth each passing year, there is bound to be an
+            overwhelming surge of online content. It was for this very <br />
+            reason that personalisation of search feeds was proposed as a solution
+            to combat the overload of irrelevant information.
+          </p>
+          <p>
+            Several social media platforms such as Facebook and Instagram along with
+            various online shopping websites have chosen to help filter content,
+            increasing user engagement, retention and <br />
+            customer loyalty.
+          </p>
+          <p>
+            Myntra is one such online shopping website that joins the list of
+            platforms that help curate a personalised fashion feed. Named theMyntra
+            Studio, this personalised search feed brings you <br />
+            the latest men and women’s fashion trends, celebrity styles, branded
+            content and daily updates from your favourite fashion labels.
+          </p>
+          <p>
+            If you are wondering how impactful Myntra Studio can be, we are listing
+            out five perks of having a rich, meaningful, and personalised fashion
+            feed in your life.
+          </p>
+          <ol>
+            <li>
+              <p class="link">
+                Keep Up With What Your Favourite Fashion Icons Are Upto
+              </p>
+              <p>
+                The #OOTD, AKA outfit of the day hashtag trend has been a rage among
+                fashion bloggers and stylists. The whole concept of building an
+                outfit from scratch and showcasing it to a <br />
+                huge community of enthusiasts using the hashtag has helped
+                individuals with understanding trends and making suitable for daily
+                wear.
+              </p>
+            </li>
+            <p>
+              Imagine if you could keep up with every piece of clothing and
+              accessory worn by the fashion icons you look upto. From Sonam Kapoor
+              to Hailey Baldwin Bieber, Myntra Studio has a <br />
+              ‘Stories’ feature to help track celebrity fashion trends, exploring
+              details such as their outfit of the day. This way, you would not ever
+              miss out on the latest celebrity fashion trends, <br />
+              from all around the world.
+            </p>
+            <li>
+              <p class="link">Quick Fashion Tip And Tricks</p>
+              <p>
+                Whether it is draping a saree into a dhoti style, wearing the right
+                lingerie under certain dresses or discovering multiple uses out of
+                heavy ethnic wear, Myntra Studio will help you <br />
+                acquire some unique and useful fashion hacks. Each hack is designed
+                with the intention to help you get the best wear out of everything
+                in your wardrobe.
+              </p>
+            </li>
+            <li>
+              <p class="link">
+                Updates on What Is Trending and New Product Launches
+              </p>
+              <p>
+                Since fast fashion seems to be extremely hard to keep up with these
+                days, a quick update on what is trending in accessories, clothing
+                and footwear would certainly be of great help. <br />
+                Myntra Studio helps you stay connected to the most beloved and
+                sought after brands such as Puma, Coverstory, The Label Life and so
+                many more.
+              </p>
+              <p>
+                Your feed keeps you updated with stories of what the brands are
+                creating including clothing, footwear and jewellery, along with
+                their new seasonal collections.
+              </p>
+            </li>
+            <li>
+              <p class="link">Explicit Step-By-Step Beauty Routines From Experts</p>
+              <p>
+                Just like fashion, the beauty community keeps on growing, and with
+                brands such as Huda Beauty, MAC and the latest Kay Beauty by Katrina
+                Kaif, are constantly coming up with <br />
+                mind-blowing products. Whether it is creating a no-makeup look,
+                different winged eyeliners, do-it-yourself facial masks and other
+                personal care beauty routines, Myntra Studio is <br />
+                here for you.
+              </p>
+            </li>
+            <li>
+              <p class="link">Celebrity Confessions And A Look Into Their Lives</p>
+              <p>
+                A bonus feature that Myntra Studio has in store for you is celebrity
+                confessions and a peek into their lives. So, Myntra helps you stay
+                connected to your most beloved celebrities in a <br />
+                matter of clicks.
+              </p>
+              <p>
+                If you are very particular when it comes to the content you wish to
+                view and engage with on social media, the ability to intricately
+                filter content helps achieve that. Applying the <br />
+                same formula for hardcore fashion lovers and shoppers, Myntra Studio
+                brings you a daily fashion fix incorporating everything that you
+                love, all at one place. Sign up on Myntra today <br />
+                and start organising your fashion feed, just the way you want to.
+              </p>
+            </li>
+          </ol>
+        </div>
+        <div class="lgp">
+          <p class="link">MYNTRA APP</p>
+          <p class="btm">
+            Myntra, India’s no. 1 online fashion destination justifies its fashion
+            relevance by bringing something new and chic to the table on the daily.
+            Fashion trends seem to change at lightning <br />
+            speed, yet the Myntra shopping app has managed to keep up without any
+            hiccups. In addition, Myntra has vowed to serve customers to the best of
+            its ability by introducing its first-ever <br />
+            loyalty program, The Myntra Insider. Gain access to priority delivery,
+            early sales, lucrative deals and other special perks on all your
+            shopping with the Myntra app. Download the Myntra <br />
+            app on your Android or IOS device today and experience shopping like
+            never before!
+          </p>
+          <p class="link">HISTORY OF MYNTRA</p>
+          <p>
+            Becoming India’s no. 1 fashion destination is not an easy feat. Sincere
+            efforts, digital enhancements and a team of dedicated personnel with an
+            equally loyal customer base have made <br />
+            Myntra the online platform that it is today. The original B2B venture
+            for personalized gifts was conceived in 2007 but transitioned into a
+            full-fledged ecommerce giant within a span of just <br />
+            a few years. By 2012, Myntra had introduced 350 Indian and international
+            brands to its platform, and this has only grown in number each passing
+            year. Today Myntra sits on top of the <br />
+            online fashion game with an astounding social media following, a loyalty
+            program dedicated to its customers, and tempting, hard-to-say-no-to
+            deals.
+          </p>
+          <p class="btm">
+            The Myntra shopping app came into existence in the year 2015 to further
+            encourage customers’ shopping sprees. Download the app on your Android
+            or IOS device this very minute to <br />
+            experience fashion like never before
+          </p>
+          <p class="link">SHOP ONLINE AT MYNTRA WITH COMPLETE CONVENIENCE</p>
+          <p>
+            Another reason why Myntra is the best of all online stores is the
+            complete convenience that it offers. You can view your favourite brands
+            with price options for different products in one <br />
+            place. A user-friendly interface will guide you through your selection
+            process. Comprehensive size charts, product information and
+            high-resolution images help you make the best buying <br />
+            decisions. You also have the freedom to choose your payment options, be
+            it card or cash-on-delivery. The 30-day returns policy gives you more
+            power as a buyer. Additionally, the try-and- <br />
+            buy option for select products takes customer-friendliness to the next
+            level.
+          </p>
+          <p>
+            Enjoy the hassle-free experience as you shop comfortably from your home
+            or your workplace. You can also shop for your friends, family and
+            loved-ones and avail our gift services for <br />
+            special occasions.
+          </p>
+        </div>
+      </footer>
 </body>
 </html>
 <script type="module">
@@ -1537,11 +2072,11 @@ let kidsDiv = document.querySelector("#kids");
 kidsDiv.addEventListener("click", kidsClick);
 function menClick() {
    localStorage.setItem("clickedOn", "Men");
-   window.location.href = "#";
+   window.location.href = "mens.html";
 }
 function womenClick() {
    localStorage.setItem("clickedOn", "Women");
-   window.location.href = "#";
+   window.location.href = "womens.html";
 }
 function kidsClick() {
    localStorage.setItem("clickedOn", "Kids");

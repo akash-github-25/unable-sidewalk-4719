@@ -7,9 +7,9 @@ img.src=el.img;
 div.addEventListener("click",on)
 function on(){
   if(el.title=="roadster"){
-  window.location.href="roadster.html"
+  window.location.href="../myntra2/roadster.html"
   }else if(el.title=="veromoda"){
-    window.location.href="veromoda.html"
+    window.location.href="../myntra2/veromoda.html"
   }
   
 }

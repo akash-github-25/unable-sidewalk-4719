@@ -11,11 +11,19 @@
         display: flex;
         justify-content:space-between
     }
+    #changes{
+        width:750px;
+        height:50px;
+        margin-bottom: 30px;
+        margin-left: 220px;
+    }
     #topleft{
         /* border: 1px solid black; */
         margin-top: 10px;
         margin-left: 10px;
-        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;;
+        /* width:30%; */
+        /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+        line-height: 30px;
     }
 
     #topright{
@@ -31,10 +39,12 @@
     }
     #sidebar{
         /* border: 1px solid red; */
-        margin-top: 10px;
-        height: 60%;
-        width: 10%;
-        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;;
+    
+        margin-top: -40px;
+        /* height: 60%; */
+        width: 15%;
+        /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+        line-height: 30px;
 
     }
     
@@ -43,24 +53,52 @@
      .products{
             display:grid;
             width:90%;
-            margin: auto;
-            grid-template-columns: repeat(5,1fr);   
+            /* margin: auto; */
+            grid-template-columns: repeat(4,1fr);   
             margin-left: 60px;
-            row-gap: 20px;
+            gap:7px;
+            /* row-gap: 20px; */
             /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;; */
             
 
         }
         .products>div{
-            width: 80%;
+            width: 90%;
+            margin-right: 10px;
+            margin-left: 3px;
             /* width:500px; */
-            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;;
+            /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;; */
         }
         .products img{
             width:100%;
 
         }
-
+        .link {
+        font-weight: bold;
+        color: rgb(83,87,102);
+      }
+      footer {
+        font-size: 13px;
+        color: rgb(155, 149, 148);
+        line-height: 8px;
+        background-color: rgb(250, 251, 252);
+        font-family: sans-serif;
+        white-space: nowrap;
+        margin-left: 80px;
+        margin-top: 30px;
+      }
+     
+      #first {
+        display: flex;
+        gap: 50px;
+        line-height: 20px;
+      }
+      .lgp {
+        line-height: 20px;
+      }
+      .btm {
+        margin-bottom: 35px;
+      }
         @font-face {
     font-family: "Whitney";
     src: url("https://constant.myntassets.com/www/fonts/WhitneyHTF-Book.eot");
@@ -568,7 +606,7 @@ margin-top: 30px;
             <img src="https://www.bing.com/th?id=OIP.8NGxjoamFPomSTDFDF1LeQHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.25&pid=3.1&rm=2" alt="Myntra_logo" />
 
             <div id="men">
-               <a href="#">MEN</a>
+               <a href="mens.html">MEN</a>
                <div id="subMenu">
                   <ul>
                      <div class="categories">
@@ -672,7 +710,7 @@ margin-top: 30px;
             </div>
 
             <div id="women">
-               <a href="#">WOMEN</a>
+               <a href="womens.html">WOMEN</a>
                <div id="subMenu">
                   <ul>
                      <div class="categories">
@@ -1126,9 +1164,9 @@ margin-top: 30px;
                <a href="#">STUDIO <sup>NEW</sup></a>
                <div id="subMenu">
                   <ul id="studio">
-                     <img src="./images/Screenshot (714).png" alt="studio_logo" />
+                     <img src="../images/Screenshot (714).png" alt="studio_logo" />
                      <p>Your daily inspiration for everything fashion</p>
-                     <img id="studioBanner" src="images/sudio-nav-banner.png" alt="nav_banner" />
+                     <img id="studioBanner" src="../images/sudio-nav-banner.png" alt="nav_banner" />
                      <button>EXPLORE STUDIO <span>&#8250;</span></button>
                   </ul>
                </div>
@@ -1137,11 +1175,11 @@ margin-top: 30px;
 
          <div id="right">
             <div>
-               <img src="images/search_logo.png" alt="" />
+               <img src="../images/search_logo.png" alt="" />
                <input type="text" placeholder="Search for products, brands and more" />
             </div>
             <div class="rightSideIcons profile">
-               <img src="images/profile_logo.png" alt="" />
+               <img src="../images/profile_logo.png" alt="" />
                <label for="">Profile</label>
                <div id="signin">
                   <ul>
@@ -1165,11 +1203,11 @@ margin-top: 30px;
                </div>
             </div>
             <div class="rightSideIcons">
-               <img src="images/heart_logo.png" alt="" />
+               <img src="../images/heart_logo.png" alt="" />
                <label for="">Wishlist</label>
             </div>
             <div class="rightSideIcons bag">
-               <img src="images/shopping_bag_logo.png" alt="" />
+               <img src="../images/shopping_bag_logo.png" alt="" />
                <label for="">Bag</label>
             </div>
          </div>
@@ -1214,12 +1252,12 @@ margin-top: 30px;
        
     </div>
 </div>
-
+<img id="changes" src="top-upper.png" alt="">
 <div id="down">
     <div id="sidebar">
         <div id="sb1">
             <label for=""><h4>BRAND</h4></label>
-            <input type="checkbox" class="check" id="roadster">Veromoda<span>(743)</span><br>
+            <input type="checkbox" class="check" id="roadster" value="Veromoda">Veromoda<span>(743)</span><br>
             <input type="checkbox" class="check" id="hrx">Adidas<span>(1656)</span><br>
             <input type="checkbox" class="check" id="wrogn">Reebok<span>(3453)</span><br>
             <input type="checkbox" class="check" id="h&n">Boogie-T<span>(1343)</span><br>
@@ -1230,7 +1268,7 @@ margin-top: 30px;
         
      <div id="sb2">
         <label for=""><h4>COLOR</h4></label>
-        <input type="checkbox" class="color" id="rd">Red<span>(843)</span><br>
+        <input type="checkbox" class="color" id="rd" value="Black">Black<span>(843)</span><br>
         <input type="checkbox" class="color" id="ylw">Yellow<span>(743)</span><br>
         <input type="checkbox" class="color" id="grn">Green<span>(293)</span><br>
         <input type="checkbox" class="color" id="blu">Blue<span>(149)</span><br>
@@ -1241,7 +1279,7 @@ margin-top: 30px;
         
        <div id="sb3">
         <label for=""><h4>CATEGORIES</h4></label>
-        <input type="checkbox" class="cate" id="ts">Tshirts<span>(1643)</span><br>
+        <input type="checkbox" class="cate" id="ts" value="Jeans">Jeans<span>(1643)</span><br>
         <input type="checkbox" class="cate" id="sh">Shorts<span>(470)</span><br>
         <input type="checkbox" class="cate" id="tp">Track Pants<span>(355)</span><br>
         <input type="checkbox" class="cate" id="hd">Hoodies<span>(567)</span><br>
@@ -1260,6 +1298,154 @@ margin-top: 30px;
 
     </div>
 </div>
+<footer>
+    <div id="first">
+      <div>
+        <p class="link" style ="color:black">ONLINE SHOPPING</p>
+        <br />
+        <p>Men</p>
+        <p>Women</p>
+        <p>Kids</p>
+        <p>Home & Living</p>
+        <p>Beauty</p>
+        <p>Gift Cards</p>
+        <p>Myntra Insider</p>
+        <br />
+        <p class="link" style ="color:black">USEFUL LINKS</p>
+        <br />
+        <p>Blog</p>
+        <p>Careers</p>
+        <p>Site Map</p>
+        <p>Corporate Information</p>
+        <p>Whitehat</p>
+      </div>
+      <div>
+        <p class="link" style ="color:black" >CUSTOMER POLICIES</p>
+        <br />
+        <p>Contact Us</p>
+        <p>FAQ</p>
+        <p>T&C</p>
+        <p>Terms Of Use</p>
+        <p>Track Orders</p>
+        <p>Shipping</p>
+        <p>Cancellation</p>
+        <p>Returns</p>
+        <p>Privacy policy</p>
+        <p>Grievance Officer</p>
+      </div>
+      <div>
+        <p class="link" style ="color:black;margin-left: 40px;">EXPERIENCE MYNTRA APP ON MOBILE</p>
+        <br />
+        <div style="display: flex; gap: 5px;margin-left: 40px;">
+          <a
+            href="https://play.google.com/store/apps/details?id=com.myntra.android"
+          >
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS09vLejaZkZFzPWi3Z-lj8rAL7K7lF5bF7CQY5XX2prZmhgkAUannhw-P5SVRaAjILZA&usqp=CAU"
+              alt="google play"
+              style="height: 40px; width: 100%"
+            />
+          </a>
+          <a
+            href="https://apps.apple.com/in/app/myntra-indias-fashion-store/id907394059"
+          >
+            <img
+              src="http://assets.stickpng.com/images/5a902db97f96951c82922874.png"
+              alt="App store"
+              style="height: 40px; width: 100%"
+            />
+          </a>
+        </div>
+        <p class="link" style ="color:black;margin-left: 40px;">KEEP IN TOUCH</p>
+        <br />
+        <div style="display: flex; gap: 5px;margin-left: 40px;">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1yF_4xzCsf8qT3XvzQvbqy5hzJLj4I8f3kI7F-xcbOz0Hk4wBpAtkBLY4O3Srb-zpPKU&usqp=CAU"
+            alt="facebook"
+            style="height: 20px"
+          /><img
+            src="data:image/jpeg;base64,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"
+            alt=""
+            style="height: 20px"
+          /><img
+            src="data:image/png;base64,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"
+            alt=""
+            style="height: 20px"
+          /><img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-wScaJDHp7WGK6SMEtOu_hblf0FpYZS8BxkzNqqCX7MgGKL_zUtv4Ok61CJhai7mQIiQ&usqp=CAU"
+            alt="instagram"
+            style="height: 20px"
+          />
+        </div>
+      </div>
+      <div>
+        <div style="display: flex; gap: 10px;margin-left: 120px;">
+          <img
+            src="https://constant.myntassets.com/web/assets/img/6c3306ca-1efa-4a27-8769-3b69d16948741574602902452-original.png"
+            alt="100% orginal"
+            style="height: 40px; padding-top: 5px"
+          />
+          <p>
+            <strong class="link" style ="color:black;font-size: 19px;">100% ORIGINAL</strong> guarantee <br /><br />
+            for all products at myntra.com
+          </p>
+        </div>
+        <div style="display: flex; gap: 10px;margin-left: 120px;">
+          <img
+            src="https://constant.myntassets.com/web/assets/img/ef05d6ec-950a-4d01-bbfa-e8e5af80ffe31574602902427-30days.png"
+            alt=""
+            style="height: 40px; padding-top: 5px"
+          />
+          <p>
+            <strong class="link" style ="color:black;font-size: 19px;">Return within 30days </strong>of <br /><br />
+            receiving your order
+          </p>
+        </div>
+      </div>
+    </div>
+    <div>
+      <table>
+        <tr>
+          <td style="vertical-align: middle; text-align: center;color:black" class="link">
+            POPULAR_SEARCHES
+          </td>
+          <td style="width: 90%"><hr /></td>
+        </tr>
+      </table>
+      <br /><br />
+      <p class="lgp">
+        Makeup | Dresses For Girls | T-Shirts | Sandals | Headphones| Babydolls
+        | Blazers For Men | Handbags | Ladies Watches| Bags | Sport Shoes |
+        Reebok Shoes |puma <br />
+        Shoes | Boxers | Wallets | Tops | Earrings | Fastrack Watches| Kurtis |
+        Nike | Smart Watches| Titan Watches | Designer Blouse | Gowns | Rings |
+        Cricket Shoes | Forever <br />
+        21 | Eye Makeup | Photo Frames | Punjabi Suits | Bikini | Myntra Fashion
+        Show | Lipstick | Saree |Watches | Dresses | Lehenga | Nike Shoes |
+        Goggles | Bras | Suit |<br />
+        Chinos | Shoes | Adidas Shoes| Woodland Shoes | Jewellery | Designers
+        Sarees
+      </p>
+  
+      <br /><br /><br />
+  
+      <div style="display: flex; justify-content: space-between">
+        <div>
+          <p>
+            In case of any concern,<a
+              href="https://www.myntra.com/contactus"
+              style="text-decoration: none; color: blue"
+              class="link"
+            >
+              Contact Us
+            </a>
+          </p>
+        </div>
+        <div><p>© 2022 www.myntra.com. All rights reserved.</p></div>
+      </div>
+      <br /><br />
+    </div>
+</footer>
 </body>
 </html>
 <script>
@@ -1271,6 +1457,8 @@ var products_data=[
 brand:"Nike",
 price: "174 ",
 category: "Women Solid Tops",
+value:"Jeans",
+colour:"Black",
 img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/17727372/2022/4/4/b011bd4f-302c-4386-aaf3-370f8d33c5161649050777721VeroModaWomenBlackBootcutSlashKneeJeans1.jpg"
 },
 
@@ -1326,6 +1514,7 @@ img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progres
       brand: "Levis",
     price:"341 " ,
     category: "Women Striped Viscose Rayon A-line Kurta  ",
+    colour:"Black",
     img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/16550934/2021/12/17/018aed81-4de2-429e-832c-041c3537bdc41639753249564Coats1.jpg"
     }, 
     {
@@ -1350,12 +1539,14 @@ img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progres
       brand: "Reebok",
     price:"342 " ,
     category: " Printed Cotton Blend Straight ",
+    value:"Jeans",
     img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/14007072/2021/4/10/8303efc9-e75b-489c-8e0e-429947eb92481618032522921-Vero-Moda-Women-Trousers-5731618032522361-1.jpg"
     },
     { 
       brand: "Woodland",
     price:"222 " ,
     category: "Football polyster Cotton Vest",
+    colour:"Black",
     img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/14110690/2021/6/18/f401b6a5-c50d-4096-915c-94eca534307e1623999625066DressesVeroModaWomenTshirtsVeroModaWomenDressesVeroModaWomen1.jpg"
     },   
     { 
@@ -1392,6 +1583,7 @@ img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progres
       brand: "HRX",
     price:"394 " ,
     category: " Fit Graphic Print casual ",
+    colour:"Black",
     img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/16462866/2021/12/11/058c5c5c-a242-4589-a624-0b7ed824b2201639224770205VeroModaBlackA-LineDress1.jpg"
     },
     {
@@ -1422,6 +1614,8 @@ img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progres
       brand: "WROGN",
     price:"319 " ,
     category: "Gymnasdia Cotton T-Shirt ",
+    colour:"Black",
+    value:"Jeans",
     img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/15068458/2021/8/9/ad679b25-83e4-4980-a40d-c7d609898a3b1628491449762VeroModaWomenBlackSkinnyFitJeans1.jpg"
     },
     { 
@@ -1440,6 +1634,7 @@ img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progres
       brand: "Suits",
     price:"419 " ,
     category: "Well rounded Cotton Printed Women ",
+    colour:"Black",
     img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/16102446/2021/11/16/40538854-d37e-487d-b736-fbe901d3e2911637038025774VeroModaWomenBlackLonglineTailoredJacket1.jpg"
     },
     { 
@@ -1458,6 +1653,7 @@ img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progres
       brand: "Boogie",
     price:"199 " ,
     category: "Embellished Women Jumpsuit ",
+    colour:"Black",
     img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/15826264/2021/10/17/4b92aaf0-79e8-4e31-bfcb-9c47892bc0951634431107978VeroModaBlackA-LineDress1.jpg"
     }
          
@@ -1530,14 +1726,51 @@ function display(data){
 display(products_data);
 
 
+// function handleFilter() {
+//   var selected = document.getElementById("filterRole").value;
+//   console.log(selected);
+//   var filtered = products_data.filter(function (element) {
+//     return element.category == selected;
+//   });
+//   console.log(filtered);
+//   display(filtered);
+// }
+let x=document.querySelector(".cate")
+x.addEventListener("change",handleFilter)
+
 function handleFilter() {
-  var selected = document.getElementById("filterRole").value;
-  console.log(selected);
-  var filtered = products_data.filter(function (element) {
-    return element.category == selected;
-  });
-  console.log(filtered);
-  display(filtered);
+   if(x.value=="Jeans"){
+   let filt= products_data.filter((el)=>{
+         return el.value=="Jeans" 
+    })
+    display(filt)
+   }
+}
+
+   let y=document.querySelector(".check")
+y.addEventListener("change",title)
+function title(){
+    // console.log("no")
+   if(y.value=="Veromoda"){
+    let a=products_data.filter((el)=>{
+        return el.brand== "Veromoda"
+    })
+    display(a)
+   }
+   
+}
+
+let z=document.querySelector(".color")
+z.addEventListener("change",title1)
+function title1(){
+    // console.log("no")
+   if(z.value=="Black"){
+    let a=products_data.filter((el)=>{
+        return el.colour== "Black"
+    })
+    display(a)
+   }
+   
 }
 
 function handlePriceSort() {
