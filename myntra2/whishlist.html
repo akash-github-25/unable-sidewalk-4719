@@ -43,12 +43,56 @@
     </style>
 </head>
 <body>
-   <div id="main">
-        <h3 id="heading">PLEASE LOG IN</h3>
-        <p id="written">Login to view items in your wishlist.</p>
-        <img id="empty_logo" src="https://i.postimg.cc/90Xk0h67/Screenshot-469.png" alt="">
-        <div id="btn">Login</div>
-   </div>
+    <div id="container">
+        <div id="main">
+            <h3 id="heading">PLEASE LOG IN</h3>
+            <p id="written">Login to view items in your wishlist.</p>
+            <img id="empty_logo" src="https://i.postimg.cc/90Xk0h67/Screenshot-469.png" alt="">
+            <div id="btn">Login</div>
+       </div>
+    </div>
+   
    
 </body>
 </html>
+
+<script>
+
+   let pro_data=JSON.parse(localStorage.getItem("masai-cart"))||[];
+   display(pro_data);
+    function display(pro_data){
+        let cont=document.getElementById("container")
+        cont.innerHTML="";
+
+        pro_data.forEach(function(el,ind){
+            console.log(el);
+
+            let div=document.createElement("div");
+
+            let image=document.createElement("img");
+            image.src=el.img;
+
+            let price=document.createElement("p");
+            price.innerText=el.price;
+
+            let btn=document.createElement("button");
+            btn.innerText="X";
+            btn.addEventListener("click",function(){
+                remove(el,ind)
+            })
+
+            div.append(image,price,btn);
+
+            cont.append(div);
+        })
+    }
+
+    function remove(el,ind){
+        console.log(ind);
+        pro_data.splice(ind,1)
+        localStorage.setItem("masai-cart",JSON.stringify(pro_data))||[];
+        window.location.reload();
+    }
+
+   
+</script>
