@@ -1,0 +1,91 @@
+@font-face {
+    font-family: "Whitney";
+    src: url("https://constant.myntassets.com/www/fonts/WhitneyHTF-Book.eot");
+    src: url("https://constant.myntassets.com/www/fonts/WhitneyHTF-Book.eot?#iefix") format("embedded-opentype"),
+        url("https://constant.myntassets.com/www/fonts/WhitneyHTF-Book.woff") format("woff"),
+        url("https://constant.myntassets.com/www/fonts/WhitneyHTF-Book.ttf") format("truetype");
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+}
+
+* {
+    font-family: "Whitney";
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #fdeeef;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    margin: auto;
+    margin-top: 90px;
+    padding: 20px;
+    background-color: white;
+}
+
+#main input {
+    margin-right: 20px;
+    height: 50px;
+    width: 30px;
+    border-radius: 2px;
+    text-align: center;
+    font-size: 20px;
+    outline: none;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+#main>img {
+    width: 30%;
+    margin: 20px 40px;
+}
+
+#main p {
+    font-size: 12px;
+    margin: 10px 0px 20px 0px;
+}
+
+#main2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 30px 40px 15px 40px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+#CONFIRM {
+    margin: 20px 0px 10px 0px;
+    width: 100%;
+    display: block;
+    padding: 10px;
+    background-color: #ff3f6c;
+    color: white;
+    font-weight: bolder;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 2px;
+    outline: none;
+    border: none;
+}
+
+#CONFIRM~p span {
+    color: #ff3f6c;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#CONFIRM~p {
+    margin: 10px 0px;
+    font-size: 14px;
+}

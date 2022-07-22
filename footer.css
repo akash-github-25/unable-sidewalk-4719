@@ -1,0 +1,23 @@
+.link{
+    font-weight: bold;
+    color: rgb(112, 104, 103);
+   
+}
+footer{
+    font-size: 13px;
+    color: rgb(155, 149, 148);
+    line-height: 8px;
+    background-color: rgb(250,251,252);
+    font-family: sans-serif;
+    white-space: nowrap;
+}
+#first{
+    display: flex;
+    gap: 50px;
+}
+.lgp{
+    line-height: 20px
+}
+.btm{
+    margin-bottom:35px ;
+}
