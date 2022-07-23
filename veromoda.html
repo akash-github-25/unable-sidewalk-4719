@@ -1,0 +1,1903 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Womens Product Page</title>
+</head>
+<style>
+  #btn>a {
+    color: red;
+  }
+
+  #up {
+    display: flex;
+    justify-content: space-between
+  }
+
+  #changes {
+    width: 750px;
+    height: 50px;
+    margin-bottom: 30px;
+    margin-left: 220px;
+  }
+
+  #topleft {
+    /* border: 1px solid black; */
+    margin-top: 10px;
+    margin-left: 10px;
+    /* width:30%; */
+    /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+    line-height: 30px;
+  }
+
+  #topright {
+    margin-top: 40px;
+    margin-right: 30px;
+    width: 20%;
+  }
+
+  #down {
+    display: flex;
+    margin-top: 30px;
+    margin-left: 10px;
+
+  }
+
+  #sidebar {
+    /* border: 1px solid red; */
+
+    margin-top: -40px;
+    /* height: 60%; */
+    width: 15%;
+    /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+    line-height: 30px;
+
+  }
+
+
+
+  .products {
+    display: grid;
+    width: 90%;
+    /* margin: auto; */
+    grid-template-columns: repeat(4, 1fr);
+    margin-left: 60px;
+    gap: 7px;
+    /* row-gap: 20px; */
+    /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;; */
+
+
+  }
+
+  .products>div {
+    width: 90%;
+    margin-right: 10px;
+    margin-left: 3px;
+    /* width:500px; */
+    /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;; */
+  }
+
+  .products img {
+    width: 100%;
+
+  }
+
+  .link {
+    font-weight: bold;
+    color: rgb(83, 87, 102);
+  }
+
+  footer {
+    font-size: 13px;
+    color: rgb(155, 149, 148);
+    line-height: 8px;
+    background-color: rgb(250, 251, 252);
+    font-family: sans-serif;
+    white-space: nowrap;
+    margin-left: 80px;
+    margin-top: 30px;
+  }
+
+  #first {
+    display: flex;
+    gap: 50px;
+    line-height: 20px;
+  }
+
+  .lgp {
+    line-height: 20px;
+  }
+
+  .btm {
+    margin-bottom: 35px;
+  }
+
+  @font-face {
+    font-family: "Whitney";
+    src: url("https://constant.myntassets.com/www/fonts/WhitneyHTF-Book.eot");
+    src: url("https://constant.myntassets.com/www/fonts/WhitneyHTF-Book.eot?#iefix") format("embedded-opentype"),
+      url("https://constant.myntassets.com/www/fonts/WhitneyHTF-Book.woff") format("woff"),
+      url("https://constant.myntassets.com/www/fonts/WhitneyHTF-Book.ttf") format("truetype");
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  * {
+    font-family: "Whitney";
+    padding: 0px;
+    margin: 0px;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  #navbar {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-sizing: border-box;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px, rgba(17, 17, 26, 0.05) 0px 0px 32px;
+
+  }
+
+  #navbar label {
+    font-weight: bold;
+  }
+
+  #navbar a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+  }
+
+  #left {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  #left>img {
+    width: 50px;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    margin: 0px 30px 0px 30px;
+  }
+
+  #left>ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+  }
+
+  #left>div {
+    padding: 30px 15px;
+    font-size: 13px;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  #left>div:nth-child(2):hover {
+    border-bottom: 5px solid red;
+    padding: 30px 15px 25px 15px;
+  }
+
+  #left>div:nth-child(3):hover {
+    border-bottom: 5px solid #e84393;
+    padding: 30px 15px 25px 15px;
+  }
+
+  #left>div:nth-child(4):hover {
+    border-bottom: 5px solid rgb(255, 123, 0);
+    padding: 30px 15px 25px 15px;
+  }
+
+  #left>div:nth-child(5):hover {
+    border-bottom: 5px solid #f1c40f;
+    padding: 30px 15px 25px 15px;
+  }
+
+  #left>div:nth-child(6):hover {
+    border-bottom: 5px solid #00b894;
+    padding: 30px 15px 25px 15px;
+  }
+
+  #left>div:nth-child(7):hover {
+    border-bottom: 5px solid orangered;
+    padding: 30px 15px 25px 15px;
+  }
+
+  #subMenu {
+    display: none;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  }
+
+  #subMenu li {
+    list-style: none;
+    text-align: left;
+    line-height: 25px;
+    color: gray;
+  }
+
+  #subMenu ul {
+    display: flex;
+    padding: 0px 10px;
+  }
+
+  #subMenu ul>div {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding: 10px 20px;
+
+  }
+
+  .categories {
+    text-align: left;
+    font-size: 12px;
+    color: gray;
+    font-weight: lighter;
+  }
+
+  .categories p,
+  h3 {
+    margin: 5px 0px;
+  }
+
+  .categories p:hover {
+    color: black;
+    font-weight: bold;
+  }
+
+  .categories hr {
+    width: 180px;
+  }
+
+  #men:hover #subMenu {
+    display: block;
+    position: absolute;
+    background-color: white;
+    top: 78.2px;
+    left: 100px;
+  }
+
+  #men .categories h3 {
+    color: red;
+  }
+
+  #women:hover #subMenu {
+    display: block;
+    position: absolute;
+    background-color: white;
+    top: 78.2px;
+    left: 100px;
+  }
+
+  #women .categories h3 {
+    color: #e84393;
+  }
+
+  #kids:hover #subMenu {
+    display: block;
+    position: absolute;
+    background-color: white;
+    top: 78.2px;
+    left: 100px;
+  }
+
+  #kids .categories h3 {
+    color: rgb(255, 123, 0);
+  }
+
+  #homeLiving:hover #subMenu {
+    display: block;
+    position: absolute;
+    background-color: white;
+    top: 78.2px;
+    left: 100px;
+  }
+
+  #homeLiving .categories h3 {
+    color: #f1c40f;
+  }
+
+  #beauty:hover #subMenu {
+    display: block;
+    position: absolute;
+    background-color: white;
+    top: 78.2px;
+    left: 100px;
+  }
+
+  #beauty .categories h3 {
+    color: #00b894;
+  }
+
+  sup {
+    color: #ff3f6c;
+    font-size: 10px;
+  }
+
+  #studio:hover #subMenu {
+    display: block;
+    position: absolute;
+    background-color: white;
+    top: 79px;
+    left: 370px;
+
+  }
+
+  #studio .categories h3 {
+    color: orangered;
+
+  }
+
+  #studio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  #studioBanner {
+    width: 550px;
+    margin: 10px 0px 20px 0px;
+  }
+
+  #studio button {
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: black;
+    font-weight: bold;
+    background-color: white;
+    border: none;
+    border-radius: 2px;
+    margin: 0px 0px 10px 0px;
+    cursor: pointer;
+  }
+
+  #studio button span {
+    font-size: 20px;
+  }
+
+
+
+
+  #right {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  #right>div:first-child {
+    width: 50%;
+    padding: 7px 10px;
+    border-radius: 5px;
+    background-color: #f5f5f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px;
+  }
+
+  #right>div:first-child img {
+    width: 18px;
+  }
+
+  #right input {
+    width: 80%;
+    border: none;
+    outline: none;
+    padding: 5px;
+    margin-left: 10px;
+    color: #727389;
+    background-color: #f5f5f6;
+  }
+
+  .rightSideIcons {
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .rightSideIcons>img {
+    width: 20px;
+  }
+
+  .profile:hover {
+    border-bottom: 5px solid red;
+    padding: 20px 15px 15px 15px;
+  }
+
+  #signin {
+    display: none;
+    padding: 20px 30px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  }
+
+  #signin h3 {
+    margin: 0px;
+    color: black;
+    font-size: 14px;
+  }
+
+  #signin p {
+    margin: 0px 0px 10px 0px;
+    color: gray;
+    font-weight: lighter;
+  }
+
+  #signin li {
+    list-style: none;
+    text-align: left;
+    line-height: 25px;
+    color: gray;
+  }
+
+  #signin li:hover {
+    color: black;
+    font-weight: bold;
+  }
+
+  .profile:hover #signin {
+    display: block;
+    position: absolute;
+    background-color: white;
+    top: 78.2px;
+  }
+
+  #signin button {
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: red;
+    font-weight: bold;
+    background-color: white;
+    border: none;
+    border-radius: 2px;
+    margin: 0px 0px 10px 0px;
+    cursor: pointer;
+  }
+
+  #signin button:hover {
+    border: 1px solid red;
+    padding: 9px 19px;
+  }
+
+  @media only screen and (min-width: 320px) and (max-width: 1300px) {
+
+    #homeLiving {
+      display: none;
+    }
+
+    #subMenu>ul {
+      width: 600px;
+      overflow: scroll;
+    }
+  }
+
+  /* Medium Screen */
+  @media only screen and (min-width: 320px) and (max-width: 1000px) {
+    #left {
+      width: 40%;
+      margin: 0px 10px;
+    }
+
+    #homeLiving {
+      display: none;
+    }
+
+    #beauty {
+      display: none;
+    }
+
+    #studio {
+      display: none;
+    }
+
+    #right {
+      width: 60%;
+    }
+
+    #subMenu>ul {
+      width: 500px;
+      overflow: scroll;
+    }
+
+  }
+
+
+  /* Small Screen */
+  @media only screen and (min-width: 320px) and (max-width: 699px) {
+    #left {
+      width: 40%;
+      margin: 0px 10px;
+    }
+
+    #kids {
+      display: none;
+    }
+
+    #homeLiving {
+      display: none;
+    }
+
+    #beauty {
+      display: none;
+    }
+
+    #studio {
+      display: none;
+    }
+
+    #right {
+      width: 40%;
+    }
+
+    #right>div {
+      display: none;
+    }
+
+    #subMenu>ul {
+      width: 400px;
+      overflow: scroll;
+    }
+
+    #right>div:first-child {
+      width: 100%;
+    }
+
+  }
+
+  @media only screen and (min-width: 0px) and (max-width: 500px) {
+
+    #left {
+      width: 100%;
+    }
+
+    #kids {
+      display: none;
+    }
+
+    #homeLiving {
+      display: none;
+    }
+
+    #beauty {
+      display: none;
+    }
+
+    #studio {
+      display: none;
+    }
+
+    #right {
+      display: none;
+    }
+
+    #subMenu>ul {
+      width: 300px;
+      overflow: scroll;
+    }
+
+    #subMenu>ul {
+      width: 300px;
+      overflow: scroll;
+    }
+  }
+
+  #sb2 {
+    margin-top: 30px;
+
+  }
+
+  #sb3 {
+    margin-top: 30px;
+  }
+</style>
+
+<body>
+
+  <!-- <p>navbar strt</p> -->
+
+
+
+  <!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Myntra</title>
+    <link rel="stylesheet" href="./navbar.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div id="navbar">
+      <div id="left">
+        <img
+          src="https://www.bing.com/th?id=OIP.8NGxjoamFPomSTDFDF1LeQHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.25&pid=3.1&rm=2"
+          alt="Myntra_logo" />
+
+        <div id="men">
+          <a href="./mens.html">MEN</a>
+          <div id="subMenu">
+            <ul>
+              <div class="categories">
+                <h3>Topwear</h3>
+                <p>T-Shirts</p>
+                <p>Casual Shirts</p>
+                <p>Formal Shirts</p>
+                <p>Sweatshirts</p>
+                <p>Sweaters</p>
+                <p>Jackets</p>
+                <p>Blazers & Coats</p>
+                <p>Suits</p>
+                <p>Rain Jackets</p>
+
+                <hr />
+
+                <h3>Indian & Festive Wear</h3>
+                <p>Kurtas & Kurta Sets</p>
+                <p>Sherwanis</p>
+                <p>Nehru Jackets</p>
+                <p>Dhotis</p>
+              </div>
+              <div class="categories">
+                <h3>Bottomwear</h3>
+                <p>Jeans</p>
+                <p>Casual Trousers</p>
+                <p>Formal Trousers</p>
+                <p>Shorts</p>
+                <p>Track Pants & Joggers</p>
+
+                <hr />
+
+                <h3>Innerwear & Sleepwear</h3>
+                <p>Briefs & Trunks</p>
+                <p>Boxers</p>
+                <p>Vests</p>
+                <p>Sleepwear & Loungewear</p>
+                <p>Thermals</p>
+
+                <hr />
+
+                <h3>Plus Size</h3>
+              </div>
+              <div class="categories">
+                <h3>Footwear</h3>
+                <p>Casual Shoes</p>
+                <p>Sports Shoes</p>
+                <p>Formal Shoes</p>
+                <p>Sneakers</p>
+                <p>Sandals & Floaters</p>
+                <p>Flip Flops</p>
+                <p>Socks</p>
+
+                <hr />
+
+                <h3>Personal Care & Grooming</h3>
+                <h3>Sunglasses & Frames</h3>
+                <h3>Watches</h3>
+              </div>
+              <div class="categories">
+                <h3>Sports & Active Wear</h3>
+                <p>Sports Shoes</p>
+                <p>Sports Sandals</p>
+                <p>Active T-Shirts</p>
+                <p>Track Pants & Shorts</p>
+                <p>Tracksuits</p>
+                <p>Jackets & Sweatshirts</p>
+                <p>Sports Accessories</p>
+                <p>Swimwear</p>
+
+                <hr />
+
+                <h3>Gadgets</h3>
+                <p>Smart Wearables</p>
+                <p>Fitness Gadgets</p>
+                <p>Headphones</p>
+                <p>Speakers</p>
+              </div>
+              <div class="categories">
+                <h3>Fasion Accessories</h3>
+                <p>Wallets</p>
+                <p>Belts</p>
+                <p>Perfumes & Body Mists</p>
+                <p>Trimmers</p>
+                <p>Deodorants</p>
+                <p>Ties, Cufflinks & Pocket Squares</p>
+                <p>Accessory Gift Sets</p>
+                <p>Caps & Hats</p>
+                <p>Mufflers, Scarves & Gloves</p>
+                <p>Phone Cases</p>
+                <p>Rings & Wristwear</p>
+                <p>Helmets</p>
+
+                <hr />
+
+                <h3>Bags & Backpacks</h3>
+                <h3>Luggages & Trolleys</h3>
+              </div>
+            </ul>
+          </div>
+        </div>
+
+        <div id="women">
+          <a href="./womens.html">WOMEN</a>
+          <div id="subMenu">
+            <ul>
+              <div class="categories">
+                <h3>Indian & Fusion Wear</h3>
+
+                <p>Kurtas & Suits</p>
+                <p>Kurtis, Tunics & Tops</p>
+                <p>Sarees</p>
+                <p>Ethnic Wear</p>
+                <p>Leggings, Salwars & Churidars</p>
+                <p>Skirts & Palazzos</p>
+                <p>Dress Materials</p>
+                <p>Lehenga Cholis</p>
+                <p>Dupattas & Shawls</p>
+                <p>Jackets</p>
+
+                <hr />
+
+                <h3>Belts, Scarves & More</h3>
+                <h3>Watches & Wearables</h3>
+              </div>
+              <div class="categories">
+                <h3>Western Wear</h3>
+
+                <p>Dresses</p>
+                <p>Tops</p>
+                <p>Tshirts</p>
+                <p>Jeans</p>
+                <p>Trousers & Capris</p>
+                <p>Shorts & Skirts</p>
+                <p>Co-ords</p>
+                <p>Playsuits</p>
+                <p>Jumpsuits</p>
+                <p>Shrugs</p>
+                <p>Sweaters & Sweatshirts</p>
+                <p>Jackets & Coats</p>
+                <p>Blazers & Waistcoats</p>
+
+                <hr />
+
+                <h3>Plus Size</h3>
+              </div>
+              <div class="categories">
+                <h3>Maternity</h3>
+
+                <h3>Sunglasses & Frames</h3>
+                <h3>Footwear</h3>
+                <p>Flats</p>
+                <p>Casual Shoes</p>
+                <p>Heels</p>
+                <p>Boots</p>
+                <p>Sports Shoes & Floaters</p>
+
+                <hr />
+
+                <h3>Sports & Active Wear</h3>
+
+                <p>Clothing</p>
+                <p>Footwear</p>
+                <p>Sports Accessories</p>
+                <p>Sports Equipment</p>
+              </div>
+              <div class="categories">
+                <h3>Lingerie & Sleepwear</h3>
+
+                <p>Bra</p>
+                <p>Briefs</p>
+                <p>Shapewear</p>
+                <p>Sleepwear & Loungewear</p>
+                <p>Swimwear</p>
+                <p>Camisoles & Thermals</p>
+
+                <hr />
+
+                <h3>Beauty & Personal Care</h3>
+
+                <p>Makeup</p>
+                <p>Skincare</p>
+                <p>Premium Beauty</p>
+                <p>Lipsticks</p>
+                <p>Fragrances</p>
+              </div>
+              <div class="categories">
+                <h3>Gadgets</h3>
+
+                <p>Smart Wearables</p>
+                <p>Fitness Gadgets</p>
+                <p>Headphones</p>
+                <p>Speakers</p>
+
+                <hr />
+
+                <h3>Jewellery</h3>
+
+                <p>Fashion Jewellery</p>
+                <p>Fine Jewellery</p>
+                <p>Earrings</p>
+
+                <hr />
+
+                <h3>Backpacks</h3>
+
+                <h3>Handbags, Bags & Wallets</h3>
+                <h3>Luggages & Trolleys</h3>
+              </div>
+            </ul>
+          </div>
+        </div>
+
+        <div id="kids">
+          <a href="#">KIDS</a>
+          <div id="subMenu">
+            <ul>
+              <div class="categories">
+                <h3>Boys Clothing</h3>
+
+                <p>T-Shirts</p>
+                <p>Shirts</p>
+                <p>Shorts</p>
+                <p>Jeans</p>
+                <p>Trousers</p>
+                <p>Clothing Sets</p>
+                <p>Ethnic Wear</p>
+                <p>Track Pants & Pyjamas</p>
+                <hr />
+                <p>Jacket & Sweater</p>
+                <p>Sweatshirts</p>
+                <p>Party Wear</p>
+                <p>Innerwear & Thermals</p>
+                <p>Nightwear & Loungewear</p>
+                <p>Value Packs</p>
+              </div>
+              <div class="categories">
+                <h3>Girls Clothing</h3>
+
+                <p>Dresses</p>
+                <p>TOp5</p>
+                <p>Tshirts</p>
+                <p>Clothing Sets</p>
+                <p>Lehenga choli</p>
+                <p>Kurta Sets</p>
+                <p>Party wear</p>
+                <p>Dungarees & Jumpsuits</p>
+                <p>Skirts & shorts</p>
+                <p>Tights & Leggings</p>
+                <p>Jeans, Trousers & Capris</p>
+                <hr />
+                <p>Jacket & Sweater</p>
+                <p>Sweatshirts</p>
+                <p>Innerwear & Thermals</p>
+                <p>Nightwear & Loungewear</p>
+                <p>Value Packs</p>
+              </div>
+              <div class="categories">
+                <h3>Footwear</h3>
+
+                <p>Casual Shoes</p>
+                <p>Flipflops</p>
+                <p>Sports Shoes</p>
+                <p>Flats</p>
+                <p>Sandals</p>
+                <p>Heels</p>
+                <p>School Shoes</p>
+                <p>Socks</p>
+
+                <hr />
+
+                <h3>Toys</h3>
+
+                <p>Learning & Development</p>
+                <p>Activity Toys</p>
+                <p>Soft Toys</p>
+                <p>Action Figure / Play set</p>
+              </div>
+              <div class="categories">
+                <h3>Infants</h3>
+
+                <p>Bodysuits</p>
+                <p>Rompers & Sleepsuits</p>
+                <p>Clothing Sets</p>
+                <p>Tshirts & Tops</p>
+                <p>Dresses</p>
+                <p>Bottom wear</p>
+                <p>Winter Wear</p>
+                <p>Innerwear & Sleepwear</p>
+                <p>Infant Care</p>
+
+                <hr />
+
+                <h3>Home & Bath</h3>
+
+                <h3>Personal Care</h3>
+              </div>
+              <div class="categories">
+                <h3>Kids Accessories</h3>
+
+                <p>Bags & Backpacks</p>
+                <p>Watches</p>
+                <p>Jewellery & Hair accessory</p>
+                <p>Sunglasses</p>
+                <p>Masks & Protective Gears</p>
+                <p>Caps & Hats</p>
+
+                <hr />
+
+                <h3>Brands</h3>
+
+                <p>H&M</p>
+                <p>Max Kids</p>
+                <p>Pantaloons</p>
+                <p>United Colors Of Benetton Kids</p>
+                <p>US Polo Assn. Kids</p>
+                <p>Mothercare</p>
+                <p>HRX</p>
+              </div>
+            </ul>
+          </div>
+        </div>
+
+        <div id="homeLiving">
+          <a href="#">HOME & LIVING</a>
+          <div id="subMenu">
+            <ul>
+              <div class="categories">
+                <h3>Bed Linen a Furnishing</h3>
+
+                <p>Bed Runners</p>
+                <p>Mattress Protectors</p>
+                <p>Bedsheets</p>
+                <p>Bedding Sets</p>
+                <p>Blankets Quilts & Dohars</p>
+                <p>Pillows & Pillow Covers</p>
+                <p>Bed Covers</p>
+                <p>Diwan Sets</p>
+                <p>Chair Pads & Covers</p>
+                <p>Sofa Covers</p>
+
+                <hr />
+
+                <h3>Flooring</h3>
+
+                <p>Floor Runners</p>
+                <p>Carpets</p>
+                <p>Floor Mats & Dhurries</p>
+                <p>Door Mats</p>
+              </div>
+              <div class="categories">
+                <h3>Bath</h3>
+
+                <p>Bath Towels</p>
+                <p>Hand & Face Towels</p>
+                <p>Beach Towels</p>
+                <p>Towels Set</p>
+                <p>Bath Rugs</p>
+                <p>Bath Robes</p>
+                <p>Bathroom Accessories</p>
+                <p>Shower Curtains</p>
+
+                <hr />
+
+                <h3>Lamps & Lighting</h3>
+
+                <p>Floor Lamps</p>
+                <p>Ceiling Lamps</p>
+                <p>Table Lamps</p>
+                <p>Wall Lamps</p>
+                <p>Outdoor Lamps</p>
+                <p>String Lights</p>
+              </div>
+              <div class="categories">
+                <h3>Home Décor</h3>
+
+                <p>Plants & Planters</p>
+                <p>Aromas & Candles</p>
+                <p>Clocks</p>
+                <p>Mirrors</p>
+                <p>Wall Décor</p>
+                <p>Festive Decor</p>
+                <p>Pooja Essentials</p>
+                <p>Wall Shelves</p>
+                <p>Fountains</p>
+                <p>Showpieces & Vases</p>
+                <p>Ottoman</p>
+
+                <hr />
+
+                <h3>Cushions & Cushion Covers</h3>
+                <h3>Curtains</h3>
+              </div>
+              <div class="categories">
+                <h3>Home Gift Sets</h3>
+
+                <h3>Kitchen & Table</h3>
+
+                <p>Table Runners</p>
+                <p>Dinnerware & Serveware</p>
+                <p>Cups and Mugs</p>
+                <p>Bakeware & Cookware</p>
+                <p>Kitchen Storage & Tools</p>
+                <p>Bar & Drinkware</p>
+                <p>Table Covers & Furnishings</p>
+
+                <hr />
+
+                <p>Storage</p>
+
+                <p>Bins</p>
+                <p>Hangers</p>
+                <p>Organisers</p>
+                <p>Hooks & Holders</p>
+                <p>Laundry Bags</p>
+              </div>
+              <div class="categories">
+                <h3>Brands</h3>
+
+                <p>H&M</p>
+                <p>Marks & Spencer</p>
+                <p>Home Centre</p>
+                <p>Spaces</p>
+                <p>D'Decor</p>
+                <p>Story@Home</p>
+                <p>Pure Home & Living</p>
+                <p>Swayam</p>
+                <p>Raymond Home</p>
+                <p>Maspar</p>
+                <p>Trident</p>
+                <p>Cortina</p>
+                <p>Random</p>
+                <p>Ellementry</p>
+                <p>ROMEE</p>
+                <p>SEJ by Nisha Gupta</p>
+              </div>
+            </ul>
+          </div>
+        </div>
+
+        <div id="beauty">
+          <a href="#">BEAUTY</a>
+          <div id="subMenu">
+            <ul>
+              <div class="categories">
+                <h3>Makeup</h3>
+
+                <p>Lipstick</p>
+                <p>Lip Gloss</p>
+                <p>Lip Liner</p>
+                <hr />
+                <p>Mascara</p>
+                <p>Eyeliner</p>
+                <p>Kajal</p>
+                <p>Eyeshadow</p>
+                <p>Foundation</p>
+                <p>Primer</p>
+                <p>Concealer</p>
+                <p>Compact</p>
+                <p>Nail Polish</p>
+              </div>
+              <div class="categories">
+                <h3>Skincare, Bath & Body</h3>
+
+                <p>Face Moisturiser</p>
+                <p>Cleanser</p>
+                <p>Masks & Peel</p>
+                <p>Sunscreen</p>
+                <p>Serum</p>
+                <p>Face Wash</p>
+                <p>Eye Cream</p>
+                <p>Lip Balm</p>
+                <p>Body Lotion</p>
+                <p>Body Wash</p>
+                <p>Body Scrub</p>
+                <p>Hand Cream</p>
+
+                <hr />
+
+                <h3>Baby Care</h3>
+                <h3>Masks</h3>
+              </div>
+              <div class="categories">
+                <h3>Haircare</h3>
+
+                <p>Shampoo</p>
+                <p>Conditioner</p>
+                <p>Hair Cream</p>
+                <p>Hair Oil</p>
+                <p>Hair Gel</p>
+                <p>Hair Color</p>
+                <p>Hair Serum</p>
+                <p>Hair Accessory</p>
+
+                <hr />
+
+                <h3>Fragrances</h3>
+
+                <p>Perfume</p>
+                <p>Deodorant</p>
+                <p>Body Mist</p>
+              </div>
+              <div class="categories">
+                <h3>Appliances</h3>
+
+                <p>Hair Straightener</p>
+                <p>Hair Dryer</p>
+                <p>Epilator</p>
+
+                <hr />
+
+                <h3>Men's Grooming</h3>
+
+                <p>Trimmers</p>
+                <p>Beard Oil</p>
+                <p>Hair Wax</p>
+
+                <hr />
+
+                <h3>Beauty Gift & Makeup Set</h3>
+
+                <p>Beauty Gift</p>
+                <p>Makeup Kit</p>
+
+                <hr />
+
+                <h3>Premium Beauty</h3>
+                <h3>Wellness & Hygiene</h3>
+              </div>
+              <div class="categories">
+                <h3>Top Brands</h3>
+
+                <p>Lakme</p>
+                <p>Maybelline</p>
+                <p>LOreal</p>
+                <p>Philips</p>
+                <p>Bath & Body Works</p>
+                <p>THE BODY SHOP</p>
+                <p>Biotique</p>
+                <p>Mamaearth</p>
+                <p>MCaffeine</p>
+                <p>Nivea</p>
+                <p>Lotus Herbals</p>
+                <p>LOreal Professionnel</p>
+                <hr />
+                <p>KAMA AYURVEDA</p>
+                <p>M.A.C</p>
+                <p>Forest Essentials</p>
+              </div>
+            </ul>
+          </div>
+        </div>
+
+        <div id="studio">
+          <a href="#">STUDIO <sup>NEW</sup></a>
+          <div id="subMenu">
+            <ul id="studio">
+              <img src="./images/Screenshot (714).png" alt="studio_logo" />
+              <p>Your daily inspiration for everything fashion</p>
+              <img id="studioBanner" src="./images/sudio-nav-banner.png" alt="nav_banner" />
+              <button>EXPLORE STUDIO <span></span></button>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div id="right">
+        <div>
+          <img src="./images/search_logo.png" alt="" />
+          <input type="text" placeholder="Search for products, brands and more" />
+        </div>
+        <div class="rightSideIcons profile">
+          <img src="./images/profile_logo.png" alt="" />
+          <label for="">Profile</label>
+          <div id="signin">
+            <ul>
+              <li>
+                <h3>Welcome</h3>
+                <p>To access account and manage orders</p>
+                <button id="btn" type="submit"><a href="./signin.html">LOGIN/SIGNUP</a></button>
+              </li>
+              <hr />
+              <li>Order</li>
+              <li>Wishlist</li>
+              <li>Gift Cards</li>
+              <li>Contact Us</li>
+              <li>Myntra Insider</li>
+              <hr />
+              <li>Myntra Credit</li>
+              <li>Coupons</li>
+              <li>Saved Cards</li>
+              <li>Saved Addresses</li>
+            </ul>
+          </div>
+        </div>
+        <div class="rightSideIcons">
+          <img src="./images/heart_logo.png" alt="" />
+          <a href="./wishlist.html"><label for="">Wishlist</label></a>
+        </div>
+        <div class="rightSideIcons bag">
+          <img src="./images/shopping_bag_logo.png" alt="" />
+          <a href="./bag.html"><label for="">Bag</label></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- <p>navbar END</p> -->
+
+
+    <div id="up">
+      <div id="topleft">
+        <p>Home / Clothing / <b>Mfb Brands</b></p>
+        <h3>Mfb Brands - 7836 items</h3>
+        <h3>FILTERS </h3>
+      </div>
+      <div id="topright">
+        <div id="sortid">
+          <label for="">Sort by:</label>
+          <!-- <select  id="sorting">
+                <option value="low">Low to high</option>
+                <option value="high">High to low</option>
+                <option value="disc">Discount</option>
+            </select> -->
+          <!-- <select id="filterRole" onChange="handleFilter()">
+              <option value="none">Select a Category</option>
+              <option value="Featured">Featured</option>
+              <option value="Best Selling">Best Selling</option>
+              
+          </select> -->
+          <select id="sortNames" onChange="handleNameSort()">
+            <option value="">Sort By Name</option>
+            <option value="asc">Ascending</option>
+            <option value="dsc">Descending</option>
+          </select>
+
+          <select id="sortPrice" onChange="handlePriceSort()">
+            <option value="nil">Sort By Price</option>
+            <option value="HTL">High to Low</option>
+            <option value="LTH">Low to High</option>
+          </select>
+
+        </div>
+
+      </div>
+    </div>
+    <img id="changes" src="top-upper.png" alt="">
+    <div id="down">
+      <div id="sidebar">
+        <div id="sb1">
+          <label for="">
+            <h4>BRAND</h4>
+          </label>
+          <input type="checkbox" class="check" id="roadster" value="Veromoda">Veromoda<span>(743)</span><br>
+          <input type="checkbox" class="check" id="hrx">Adidas<span>(1656)</span><br>
+          <input type="checkbox" class="check" id="wrogn">Reebok<span>(3453)</span><br>
+          <input type="checkbox" class="check" id="h&n">Boogie-T<span>(1343)</span><br>
+          <input type="checkbox" class="check" id="moda">New York Clove<span>(4743)</span><br>
+          <input type="checkbox" class="check" id="harv">Harvard<span>(743)</span><br>
+          <input type="checkbox" class="check" id="clov">HRX<span>(1143)</span><br>
+        </div>
+
+        <div id="sb2">
+          <label for="">
+            <h4>COLOR</h4>
+          </label>
+          <input type="checkbox" class="color" id="rd" value="Black">Black<span>(843)</span><br>
+          <input type="checkbox" class="color" id="ylw">Yellow<span>(743)</span><br>
+          <input type="checkbox" class="color" id="grn">Green<span>(293)</span><br>
+          <input type="checkbox" class="color" id="blu">Blue<span>(149)</span><br>
+          <input type="checkbox" class="color" id="gry">Grey<span>(274)</span><br>
+          <input type="checkbox" class="color" id="whit">White<span>(403)</span><br>
+        </div>
+
+
+        <div id="sb3">
+          <label for="">
+            <h4>CATEGORIES</h4>
+          </label>
+          <input type="checkbox" class="cate" id="ts" value="Jeans">Jeans<span>(1643)</span><br>
+          <input type="checkbox" class="cate" id="sh">Shorts<span>(470)</span><br>
+          <input type="checkbox" class="cate" id="tp">Track Pants<span>(355)</span><br>
+          <input type="checkbox" class="cate" id="hd">Hoodies<span>(567)</span><br>
+          <input type="checkbox" class="cate" id="lg">Leggings<span>(293)</span><br>
+          <input type="checkbox" class="cate" id="jc">Jackets<span>(743)</span><br>
+        </div>
+
+
+
+
+
+      </div>
+
+      <div class="products">
+
+
+      </div>
+    </div>
+    <footer>
+      <div id="first">
+        <div>
+          <p class="link" style="color:black">ONLINE SHOPPING</p>
+          <br />
+          <p>Men</p>
+          <p>Women</p>
+          <p>Kids</p>
+          <p>Home & Living</p>
+          <p>Beauty</p>
+          <p>Gift Cards</p>
+          <p>Myntra Insider</p>
+          <br />
+          <p class="link" style="color:black">USEFUL LINKS</p>
+          <br />
+          <p>Blog</p>
+          <p>Careers</p>
+          <p>Site Map</p>
+          <p>Corporate Information</p>
+          <p>Whitehat</p>
+        </div>
+        <div>
+          <p class="link" style="color:black">CUSTOMER POLICIES</p>
+          <br />
+          <p>Contact Us</p>
+          <p>FAQ</p>
+          <p>T&C</p>
+          <p>Terms Of Use</p>
+          <p>Track Orders</p>
+          <p>Shipping</p>
+          <p>Cancellation</p>
+          <p>Returns</p>
+          <p>Privacy policy</p>
+          <p>Grievance Officer</p>
+        </div>
+        <div>
+          <p class="link" style="color:black;margin-left: 40px;">EXPERIENCE MYNTRA APP ON MOBILE</p>
+          <br />
+          <div style="display: flex; gap: 5px;margin-left: 40px;">
+            <a href="https://play.google.com/store/apps/details?id=com.myntra.android">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS09vLejaZkZFzPWi3Z-lj8rAL7K7lF5bF7CQY5XX2prZmhgkAUannhw-P5SVRaAjILZA&usqp=CAU"
+                alt="google play" style="height: 40px; width: 100%" />
+            </a>
+            <a href="https://apps.apple.com/in/app/myntra-indias-fashion-store/id907394059">
+              <img src="http://assets.stickpng.com/images/5a902db97f96951c82922874.png" alt="App store"
+                style="height: 40px; width: 100%" />
+            </a>
+          </div>
+          <p class="link" style="color:black;margin-left: 40px;">KEEP IN TOUCH</p>
+          <br />
+          <div style="display: flex; gap: 5px;margin-left: 40px;">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1yF_4xzCsf8qT3XvzQvbqy5hzJLj4I8f3kI7F-xcbOz0Hk4wBpAtkBLY4O3Srb-zpPKU&usqp=CAU"
+              alt="facebook" style="height: 20px" /><img
+              src="data:image/jpeg;base64,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"
+              alt="" style="height: 20px" /><img
+              src="data:image/png;base64,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"
+              alt="" style="height: 20px" /><img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-wScaJDHp7WGK6SMEtOu_hblf0FpYZS8BxkzNqqCX7MgGKL_zUtv4Ok61CJhai7mQIiQ&usqp=CAU"
+              alt="instagram" style="height: 20px" />
+          </div>
+        </div>
+        <div>
+          <div style="display: flex; gap: 10px;margin-left: 120px;">
+            <img
+              src="https://constant.myntassets.com/web/assets/img/6c3306ca-1efa-4a27-8769-3b69d16948741574602902452-original.png"
+              alt="100% orginal" style="height: 40px; padding-top: 5px" />
+            <p>
+              <strong class="link" style="color:black;font-size: 19px;">100% ORIGINAL</strong> guarantee <br /><br />
+              for all products at myntra.com
+            </p>
+          </div>
+          <div style="display: flex; gap: 10px;margin-left: 120px;">
+            <img
+              src="https://constant.myntassets.com/web/assets/img/ef05d6ec-950a-4d01-bbfa-e8e5af80ffe31574602902427-30days.png"
+              alt="" style="height: 40px; padding-top: 5px" />
+            <p>
+              <strong class="link" style="color:black;font-size: 19px;">Return within 30days </strong>of <br /><br />
+              receiving your order
+            </p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <table>
+          <tr>
+            <td style="vertical-align: middle; text-align: center;color:black" class="link">
+              POPULAR_SEARCHES
+            </td>
+            <td style="width: 90%">
+              <hr />
+            </td>
+          </tr>
+        </table>
+        <br /><br />
+        <p class="lgp">
+          Makeup | Dresses For Girls | T-Shirts | Sandals | Headphones| Babydolls
+          | Blazers For Men | Handbags | Ladies Watches| Bags | Sport Shoes |
+          Reebok Shoes |puma <br />
+          Shoes | Boxers | Wallets | Tops | Earrings | Fastrack Watches| Kurtis |
+          Nike | Smart Watches| Titan Watches | Designer Blouse | Gowns | Rings |
+          Cricket Shoes | Forever <br />
+          21 | Eye Makeup | Photo Frames | Punjabi Suits | Bikini | Myntra Fashion
+          Show | Lipstick | Saree |Watches | Dresses | Lehenga | Nike Shoes |
+          Goggles | Bras | Suit |<br />
+          Chinos | Shoes | Adidas Shoes| Woodland Shoes | Jewellery | Designers
+          Sarees
+        </p>
+
+        <br /><br /><br />
+
+        <div style="display: flex; justify-content: space-between">
+          <div>
+            <p>
+              In case of any concern,<a href="https://www.myntra.com/contactus"
+                style="text-decoration: none; color: blue" class="link">
+                Contact Us
+              </a>
+            </p>
+          </div>
+          <div>
+            <p>© 2022 www.myntra.com. All rights reserved.</p>
+          </div>
+        </div>
+        <br /><br />
+      </div>
+    </footer>
+  </body>
+
+  </html>
+  <script>
+
+
+    var products_data = [
+
+      {
+        brand: "Nike",
+        price: "174 ",
+        strikeoff:"1999",
+        category: "Women Solid Tops",
+        value: "Jeans",
+        colour: "Black",
+        img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/17727372/2022/4/4/b011bd4f-302c-4386-aaf3-370f8d33c5161649050777721VeroModaWomenBlackBootcutSlashKneeJeans1.jpg"
+      },
+
+      {
+        brand: "Puma",
+        price: "179  ",
+        strikeoff: "1999",
+        category: "Time Travlr Round wellow ",
+        img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/17437570/2022/3/8/2729948c-2395-421e-8508-3da4d30d14f51646755017684VeroModaBlueFloralA-LineDress1.jpg"
+      },
+      {
+        brand: "Reebok",
+        price: "190 ",
+        strikeoff: "1999",
+        category: " Raw Edge blooming strips",
+        img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/15843756/2021/10/18/f65a3a1b-3ae8-4e93-b0db-1ca73fc54ab21634561696730VeroModaWomenGreySelfDesign1.jpg"
+      },
+      {
+        brand: "Adidas",
+        price: "290 ",
+        strikeoff: "1999",
+        category: "Chanderi Cotton Silk ",
+        img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/17100006/2022/2/9/6eae400e-25c6-467c-897f-279fc20b45b01644387976959VeroModaGreenFloralA-LineDress1.jpg"
+      },
+      {
+        brand: "Woodland",
+        price: "179 ",
+        strikeoff: "1999",
+        category: "Animal Print, Printed Bhagalpuri Art Silk",
+        img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/17608354/2022/3/24/58655185-d641-4336-b43c-819d233798ab1648066503809VeroModaPurpleBlackPrintedBasicJumpsuit1.jpg"
+      },
+      {
+        brand: "Veromoda",
+        price: "169 ",
+        strikeoff: "1999",
+        category: "Printed Pure Cotton Womens T-Shirt ",
+        img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/16379500/2021/12/6/f5516bf2-2396-4ef2-a2e2-e3e7013b30e51638781398460VeroModaOliveGreenTop1.jpg"
+      },
+      {
+        brand: "H&M",
+        price: "199 ",
+        strikeoff: "1999",
+        category: "Design Silk Blend Straight Kurta  (Purple)",
+        img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/18520174/2022/5/30/0b948e8a-3f91-4539-a397-1304cb18bee61653928923512VeroModaBlueGreyStripedBasicJumpsuit1.jpg"
+      },
+      {
+        brand: "ON",
+        price: "490 ",
+        strikeoff: "1999",
+        category: "Design Silk Blend Straight Kurta  (Purple) ",
+        img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/16100582/2021/11/15/0b9e96bc-3aec-4692-8d12-951c70cf3c091636998482919VeroModaPurpleCheckedDress1.jpg"
+      },
+      {
+        brand: "Denim",
+        price: "169 ",
+        strikeoff: "1999",
+        category: "Checkered Cotton Blend Straight Kurta  (Maroon) ",
+        img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/16379460/2021/12/6/f27eb104-731c-45c6-a64b-f7c543705d9f1638781126174VeroModaBlueTop1.jpg"
+      },
+      {
+        brand: "Levis",
+        price: "341 ",
+        strikeoff: "1999",
+        category: "Women Striped Viscose Rayon A-line Kurta  ",
+        colour: "Black",
+        img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/16550934/2021/12/17/018aed81-4de2-429e-832c-041c3537bdc41639753249564Coats1.jpg"
+      },
+      {
+        brand: "Clovia",
+        price: "529 ",
+        strikeoff: "1999",
+        category: " Women Striped Viscose Rayon A-line Kurta  ",
+        img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/17737878/2022/4/2/57299c37-4251-49f3-a312-edeada53f8081648887146622VeroModaPinkTop1.jpg"
+      },
+      {
+        brand: "Denim",
+        price: "119 ",
+        strikeoff: "1999",
+        category: "Blend straight womens legging",
+        img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/16109514/2021/11/16/a37e5ced-c807-4f46-9110-4084743c43f01637051815675VeroModaWomenPurpleSolid1.jpg"
+      },
+      {
+        brand: "Levis",
+        price: "169 ",
+        strikeoff: "1999",
+        category: "Gym Vest sports trackpant ",
+        img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/16380626/2021/12/6/a4f5664c-d8a5-4c75-bb3b-c4e9ec6ce6671638783146392VeroModaWomenBeigeGeometricTailoredJacket1.jpg"
+      },
+      {
+        brand: "Reebok",
+        price: "342 ",
+        strikeoff: "1999",
+        category: " Printed Cotton Blend Straight ",
+        value: "Jeans",
+        img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/14007072/2021/4/10/8303efc9-e75b-489c-8e0e-429947eb92481618032522921-Vero-Moda-Women-Trousers-5731618032522361-1.jpg"
+      },
+      {
+        brand: "Woodland",
+        price: "222 ",
+        strikeoff: "1999",
+        category: "Football polyster Cotton Vest",
+        colour: "Black",
+        img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/14110690/2021/6/18/f401b6a5-c50d-4096-915c-94eca534307e1623999625066DressesVeroModaWomenTshirtsVeroModaWomenDressesVeroModaWomen1.jpg"
+      },
+      {
+        brand: "SRX",
+        price: "122 ",
+        strikeoff: "1999",
+        category: "Spread collctn Cotton kurti ",
+        img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/18786312/2022/6/20/bb5c95bd-4cce-4b06-830c-79a95d297eae1655708008062Tops1.jpg"
+      },
+      {
+        brand: "Levis",
+        price: "174",
+        strikeoff: "1999",
+        category: "catty pround bottom neck kurti ",
+        img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/15684918/2021/9/29/d80f6e57-f458-45bf-b7e8-9606845de50b1632919270850Jumpsuit1.jpg"
+      },
+      {
+        brand: "Nike",
+        price: "197 ",
+        strikeoff: "1999",
+        category: "BRYAN Pure Cotton lehnga",
+        img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/16109494/2021/11/16/10cf0560-403a-4a65-b1c5-23190a210b3d1637051090768VeroModaWomenPinkSelfDesign1.jpg"
+      },
+      {
+        brand: "Puma",
+        price: "169 ",
+        strikeoff: "1999",
+        category: "Slim Pure Cotton legging ",
+        img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/17491136/2022/3/11/0cf45e26-0e46-497f-b4fb-508397527c6b1647022524634VeroModaPeach-ColouredA-LineDress5.jpg"
+      },
+      {
+        brand: "Veromoda",
+        price: "164 ",
+        strikeoff: "1999",
+        category: "Women Slim Fit Checkered Sp T-Shirt ",
+        img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/13292488/2021/2/8/4ba00c1d-f881-4e37-a517-646bd18c897c1612778264654-Vero-Moda-Women-Dresses-21612778263731-1.jpg"
+      },
+      {
+        brand: "HRX",
+        price: "394 ",
+        strikeoff: "1999",
+        category: " Fit Graphic Print casual ",
+        colour: "Black",
+        img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/16462866/2021/12/11/058c5c5c-a242-4589-a624-0b7ed824b2201639224770205VeroModaBlackA-LineDress1.jpg"
+      },
+      {
+        brand: "Newyork Suits",
+        price: "261 ",
+        strikeoff: "1999",
+        category: "VeBNoRn Regular Fit Solid Button Down ",
+        img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/16560582/2021/12/20/d095d5b9-8c7a-4b99-9c88-2b2bad448f581640013252293VeroModaGreyA-LineMidiDress1.jpg"
+      },
+      {
+        brand: "WROGN",
+        price: "449 ",
+        strikeoff: "1999",
+        category: "Slim Fit Solid Casual ",
+        img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/17102636/2022/2/9/df604ab1-087a-47b9-a3d9-0ec5558f88a51644401694979VeroModaWomenPinkStripedV-NeckPocketsT-shirt5.jpg"
+      },
+      {
+        brand: "Aquard",
+        price: "169 ",
+        strikeoff: "1999",
+        category: "Viscose Rayon Straight Kurta  ",
+        img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/13391430/2021/2/1/5b9902db-1f81-4deb-9471-12f237ac594a1612170551663-Vero-Moda-Women-Leggings-111612170550237-1.jpg"
+      },
+      {
+        brand: "Aquard",
+        price: "521 ",
+        strikeoff: "1999",
+        category: "VolvO GYM Pure Cotton T-Shirt ",
+        img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/16792442/2022/2/18/c4ca6adf-7bad-4331-b735-1f4d8c9e49881645186691832-Vero-Moda-Blue-Striped-Maxi-Midi-Dress-4331645186691358-1.jpg"
+      },
+      {
+        brand: "WROGN",
+        price: "319 ",
+        strikeoff: "1999",
+        category: "Gymnasdia Cotton T-Shirt ",
+        colour: "Black",
+        value: "Jeans",
+        img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/15068458/2021/8/9/ad679b25-83e4-4980-a40d-c7d609898a3b1628491449762VeroModaWomenBlackSkinnyFitJeans1.jpg"
+      },
+      {
+        brand: "H&M",
+        price: "169 ",
+        strikeoff: "1999",
+        category: "Solid Women swallow ",
+        img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/18073720/2022/4/28/58c8a271-8f58-4386-a54a-ba42dd685f101651144301905VeroModaYellowOff-ShoulderMaxiDress1.jpg"
+      },
+      {
+        brand: " Bown-Boogie",
+        price: "289 ",
+        strikeoff: "1999",
+        category: "Printed  Cotton T-Shirt ",
+        img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/14208028/2021/8/3/e7f89a77-8953-4fa3-9742-fae745f6614b1627985190106-Vero-Moda-Women-Dresses-51627985189642-1.jpg"
+      },
+      {
+        brand: "Suits",
+        price: "419 ",
+        strikeoff: "1999",
+        category: "Well rounded Cotton Printed Women ",
+        colour: "Black",
+        img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/16102446/2021/11/16/40538854-d37e-487d-b736-fbe901d3e2911637038025774VeroModaWomenBlackLonglineTailoredJacket1.jpg"
+      },
+      {
+        brand: "WROGN",
+        price: "369 ",
+        strikeoff: "1999",
+        category: "Striped Women Jumpsuit ",
+        img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/16380652/2021/12/6/f987b8a2-6e19-429a-bc79-6b507d8716e81638786398157VeroModaOrangeCheckedDress1.jpg"
+      },
+      {
+        brand: " Leggy Harvard ",
+        price: "269 ",
+        strikeoff: "1999",
+        category: "Self Design Women Jumpsuit ",
+        img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/16379494/2021/12/6/05d83584-c6e8-44e9-bbbc-f13c1c4318311638781415471VeroModaPinkTop1.jpg"
+      },
+      {
+        brand: "Boogie",
+        price: "199 ",
+        strikeoff: "1999",
+        category: "Embellished Women Jumpsuit ",
+        colour: "Black",
+        img: "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/15826264/2021/10/17/4b92aaf0-79e8-4e31-bfcb-9c47892bc0951634431107978VeroModaBlackA-LineDress1.jpg"
+      }
+    ]
+
+
+    // localStorage.setItem("masai-ecomm",JSON.stringify(products_data));
+
+    localStorage.setItem("masai-ecomm", JSON.stringify(products_data));
+
+    let cartLSData = JSON.parse(localStorage.getItem("masai-cart")) || [];
+
+    var products = document.querySelector(".products");
+    // var filter=document.querySelector("select");
+    let wishlist = []
+    let cart2 = []
+
+    function display(data) {
+
+      products.innerHTML = null;
+
+      data.forEach(function (element) {
+
+        var card = document.createElement("div");
+
+        var img = document.createElement("img");
+        img.src = element.img;
+
+        var brand = document.createElement("h4");
+        brand.textContent = element.brand;
+
+        // var desc=document.createElement("p");
+        // desc.textContent=element.name;
+
+        var category = document.createElement("h5");
+        category.textContent = element.category;
+
+        var price = document.createElement("h4");
+        price.textContent = element.price;
+
+        var button = document.createElement("button");
+        button.innerText = "Add To Wishlist";
+        button.addEventListener("click", function () {
+          AddToWishlist(element);
+        })
+        img.addEventListener("click", function () {
+          prod(element)
+
+        })
+        function prod(element) {
+          wishlist.push(element)
+          localStorage.setItem("cart2", JSON.stringify(wishlist))
+          window.location.href = "./Cart.html"
+        }
+
+
+
+        card.append(img, brand, category, price, button);
+
+
+        products.append(card);
+      });
+
+
+
+    }
+
+    display(products_data);
+
+    // function handleFilter() {
+    //   var selected = document.getElementById("filterRole").value;
+    //   console.log(selected);
+    //   var filtered = products_data.filter(function (element) {
+    //     return element.category == selected;
+    //   });
+    //   console.log(filtered);
+    //   display(filtered);
+    // }
+    let x = document.querySelector(".cate")
+    x.addEventListener("change", handleFilter)
+
+    function handleFilter() {
+      if (x.value == "Tshirts") {
+        let filt = products_data.filter((el) => {
+          return el.value == "Tshirts"
+        })
+        display(filt)
+      }
+    }
+
+    let y = document.querySelector(".check")
+    y.addEventListener("change", title)
+    function title() {
+      // console.log("no")
+      if (y.value == "Roadster") {
+        let a = products_data.filter((el) => {
+          return el.brand == "Roadster"
+        })
+        display(a)
+      }
+
+    }
+
+    let z = document.querySelector(".color")
+    z.addEventListener("change", title1)
+    function title1() {
+      // console.log("no")
+      if (z.value == "Red") {
+        let a = products_data.filter((el) => {
+          return el.colour == "Red"
+        })
+        display(a)
+      }
+
+    }
+
+    function handlePriceSort() {
+      var selected = document.getElementById("sortPrice").value;
+      //console.log(selected);
+      if (selected == "HTL") {
+        products_data.sort(function (a, b) {
+          return b.price - a.price;
+        });
+        // console.log(jobArr);
+        display(products_data);
+      }
+      if (selected == "LTH") {
+        products_data.sort(function (a, b) {
+          return a.price - b.price;
+        });
+        // console.log(jobArr);
+        display(products_data);
+      }
+    }
+    // document
+    //   .querySelector("#sortNames")
+    //   .addEventListener("change", handleNameSort);
+    function handleNameSort() {
+      var selected = document.getElementById("sortNames").value;
+      //console.log(selected);
+
+      if (selected == "asc") {
+        products_data.sort(function (a, b) {
+          var x = a.brand;
+          var y = b.brand;
+          if (x > y) {
+            return 1;
+          }
+          if (x < y) {
+            return -1;
+          }
+          return 0;
+        });
+        //console.log(products_data);
+        display(products_data);
+      }
+      if (selected == "dsc") {
+        products_data.sort(function (a, b) {
+          var x = a.brand;
+          var y = b.brand;
+          if (x > y) {
+            return -1;
+          }
+          if (x < y) {
+            return 1;
+          }
+          return 0;
+        });
+        //console.log(products_data);
+        display(products_data);
+      }
+    }
+
+    function AddToWishlist(element) {
+      // cartLSData.push(element);
+      cart2.push(element)
+
+      localStorage.setItem("cart2", JSON.stringify(cart2))
+      // localStorage.setItem("masai-cart",JSON.stringify(cartLSData));
+      alert("Product added successfully to Wishlist");
+    }
+
+  </script>
+
+</html>
+</script>

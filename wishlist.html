@@ -1,0 +1,172 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .wishhead {
+            margin: 50px 20px 40px 20px;
+        }
+
+        .wishcount {
+            color: #ff3f6c;
+        }
+
+        .container {
+            width: 90%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .container>div {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            width: 90%;
+            color: #ff3f6c;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        }
+
+        .container>.imgbox>div:nth-child(1) {
+            height: 70%;
+        }
+
+        .container img {
+            width: 100%;
+        }
+
+        .container p {
+            text-align: center;
+        }
+
+        .buttonholder {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 10px;
+
+
+        }
+
+        .buttonholder>button {
+            border: none;
+            color: white;
+            background-color: #ff3f6c;
+            padding: 15px 20px;
+            border-radius: 5px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h3 class="wishhead">My Wishlist <span class="wishcount"> </span> </h3>
+    <div class="container"></div>
+
+</body>
+
+</html>
+
+<script>
+    let wisharr = JSON.parse(localStorage.getItem("cart2")) || [];
+
+    let itemcount = wisharr.length;
+    document.querySelector(".wishcount").innerText = ` ${itemcount} Items`
+
+    wisharr.forEach(function (ele, ind) {
+
+        let box = document.createElement("div")
+
+        let image = document.createElement("img")
+        image.src = ele.img;
+
+        let imgbox = document.createElement("div")
+        box.className = "imgbox"
+        imgbox.append(image)
+
+        box.append(imgbox)
+
+        let para = document.createElement("p");
+        para.innerText = ele.brand;
+        para.style.color = "black";
+        box.append(para)
+
+        let price = document.createElement("p");
+        price.innerText = ele.price
+        price.style.color = "black"
+
+        let strikedprice = document.createElement("p");
+        strikedprice.innerText = ele.strikeoff;
+        strikedprice.style.textDecoration = "line-through";
+        strikedprice.style.color = "black";
+
+        let pricepara = document.createElement("p");
+        pricepara.className = "pricepara"
+        pricepara.append(price, strikedprice)
+        box.append(pricepara)
+
+
+
+        let buttonrm = document.createElement("button")
+        buttonrm.innerText = "Remove"
+
+        buttonrm.addEventListener("click", function () {
+            removefromwish(ind)
+        })
+
+
+        let buttonbag = document.createElement("button")
+        buttonbag.innerText = "MOVE TO BAG";
+
+        buttonbag.addEventListener("click", function () {
+            sendtocart(ele, ind)
+        })
+
+
+
+        let buttonholder = document.createElement("div");
+        buttonholder.className = "buttonholder"
+        buttonholder.append(buttonrm, buttonbag)
+        box.append(buttonholder)
+
+
+        document.querySelector(".container").append(box)
+    })
+
+
+
+    function removefromwish(ind) {
+
+        wisharr.splice(ind, 1);
+        localStorage.setItem("cart2", JSON.stringify(wisharr))
+        window.location.reload();
+
+    }
+
+    let baglist = JSON.parse(localStorage.getItem("cartItems")) || [];
+    // localStorage.setItem("cart2" , JSON.stringify(bagList))
+
+
+    function sendtocart(ele, ind) {
+
+        baglist.push(ele);
+        console.log(baglist, "1")
+        localStorage.setItem("cartItems", JSON.stringify(baglist))
+
+        wisharr.splice(ind, 1)
+        console.log(wisharr)
+        localStorage.setItem("cart2", JSON.stringify(wisharr))
+        window.location.href = "./bag.html";
+    }
+</script>
