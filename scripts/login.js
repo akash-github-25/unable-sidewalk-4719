@@ -10,7 +10,7 @@ function login() {
     if (checkuser(logindata.givenemail, logindata.givenpassword) == true) {
         localStorage.setItem("loginmembers", JSON.stringify(logindata));
         alert("login successfull !!!");
-        window.location.href = "#"
+        window.location.href = "./index.html"
     }
     else {
         alert("credentials are wrong");

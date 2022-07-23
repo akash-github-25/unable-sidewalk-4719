@@ -5,7 +5,7 @@ bag.addEventListener("click", function () {
 
 document.querySelector("#btn").addEventListener("click", login);
 function login() {
-   window.location.href = "login or  signup.html";
+   window.location.href = "./signin.html";
 }
 let menDiv = document.querySelector("#men");
 menDiv.addEventListener("click", menClick);

@@ -1,0 +1,470 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <!-- <link rel="shortcut icon" type="image/png" href="../Common Files/image/favicon.png"> -->
+    <!-- <link rel="stylesheet" href="cart.css"> -->
+    <script src="https://kit.fontawesome.com/24c494a6b6.js"crossorigin="anonymous" ></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'DM Sans', sans-serif; 
+}
+#upperbar{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #F5F5F6;
+    margin: 0px -8px;
+    color: gray;
+    align-items: center;
+    height: 79px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#upperbar >div{
+    height: 50px;
+    display: flex;
+   align-items: center;
+   margin: 5px 20px;
+   justify-content: space-between;
+
+}
+#upperbar >div>img{
+    height: 100%;
+    cursor: pointer;
+}
+#upperbar >div:first-child{
+    margin-left: 50px;
+}
+#upperbar >div:last-child{
+    margin-right: 50px;
+}
+#upperbar p > #first{
+    color: #14cda8;
+    border-bottom: 2px solid  #14cda8;
+    padding-bottom: 5px;
+}
+#upperbar p > *{
+    cursor: pointer;
+}
+#timerbox{
+    text-align: center;
+    border-bottom: 1px solid #F5F5F6;
+   color: gray;
+   font-size: 20px;
+}
+#timerbox span{
+    color:#fe3f9b;
+}
+.container{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+}
+.main{
+    width: 80%;
+    padding: 1rem;
+    margin-top: 20px;
+    display: flex;
+    border-radius: 4px;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+.main >div{
+    padding: 8px ;
+    width: 30%;
+}
+.main img{
+    width: 100%;
+}
+.main >div:last-child{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main button{
+    width: 80%;
+}
+
+.wishlistlink{
+ margin-top: 40px;
+ height: 40px;
+ margin-left: 144px;
+ width: 45.7%;
+ border :2px solid #F5F5F6;
+ border-radius: 4px;
+ display: flex;
+ font-size: 20px;
+ align-items: center;
+ cursor: pointer;
+}
+.wishlistlink >p, .wishlistlink >i{
+margin: 5px;
+}
+.wishlistlink > p:hover{
+    color:#32cd32;
+    font-weight: 900;
+    border-bottom: 2px solid #ff3f6c;
+}
+.container span{
+    margin: 4px;
+}
+.orderbox{
+    align-self: flex-start;
+    margin-top: 80px;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+.con_ord{
+    display:grid;
+    grid-template-columns: 60% 35%;
+    justify-content: center;
+}
+.orderbox>div{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0px;
+    color: #535766;
+    
+}
+.promocode{
+    display:block
+}
+button{
+    background-color: #ff3f6c;
+    color: white;
+    border: 10px;
+    outline: none;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+}
+.amount{
+    font-weight: bold;
+}
+.filldiscount{
+    color:#32cd32;
+    text-decoration: none;
+}
+.pricedets,.amount{
+    border-bottom: 1px solid gray;
+    padding-bottom: 20px;
+}
+.orderbox .makeorder,.apply{
+    justify-content: center;
+    background-color: #ff3f6c;
+    padding: 0.7rem 1.2rem;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.orderbox .makeorder{
+    margin-top: 30px;
+}
+#promo{
+    border: 1px solid #ff3f6c;
+    padding-left: 15px;
+    border-radius: 5px;
+    
+}
+.amount + p{
+    text-align: center;
+    font-size: 20px;
+}
+
+
+
+
+/* MEDEIA QUERIES FOR TAvar VIEW */
+@media all and (min-width: 721px) and (max-width: 850px){
+    .container{
+     margin-top: 20px;
+      margin-left: 10px;
+       width: 60%;
+       display: -moz-grid-line;
+       grid-template-columns: repeat(1,1fr);
+       gap: 10px;
+    }
+    .promocode{
+        display: flex;
+        flex-direction: column;
+    
+    }
+    .apply{
+        width: 30%;
+        margin: auto;
+        text-align: center;
+        margin-top: 10px;
+    }
+    #promo{
+        height: 30px;
+    }
+       
+}
+
+@media all and (max-width: 720px){
+    .con_ord{
+        display:grid;
+        grid-template-columns: repeat(1,1fr);
+        padding: 5px;
+    }
+    .container{
+        margin: auto;
+          width: 90%;
+          display: -moz-grid-line;
+          grid-template-columns: repeat(1,1fr);
+          gap: 10px;
+       }
+       .orderbox{
+        height: 400px;
+        width: 50%;
+        margin: auto;
+        border :2px solid #F5F5F6;
+        margin-top: 80px;
+        padding: 20px;
+        border-radius: 4px;
+    }
+    #upperbar >div{
+       margin: 5px 5px;
+    
+    }
+    #upperbar >div:first-child{
+        margin-left: 10px;
+    }
+    #upperbar >div:last-child{
+        margin-right: 10px;
+    }
+    .footer{
+        display: flex;
+        flex-direction: column;
+    }
+       
+}
+    </style>
+
+</head>
+<body>
+    <div id="upperbar">
+        <div>
+         <img src="../images/Myntra_logo.png" alt="brandLogo" id="landingPage">
+        </div>
+        <div>
+           <p> <span id="first">BAG </span>--------- <span id="second">ADDRESS</span>   --------- <span>PAYMENT</span></p>
+        </div>
+        <div>
+         <img src="https://constant.myntassets.com/checkout/assets/img/sprite-secure.png" alt="">
+        <span>100% SECURE</span>
+        </div>
+    </div>
+
+    <div id="timerbox">
+        <p>Sale Starts in <span> 3 </span> Days</p>
+    </div>
+<div class="con_ord">
+    <div class="container">
+
+    </div>
+
+    <div class="orderbox">
+      <div class="pricedets">PRICE DETAILS</div>
+      <div class="total">
+         <span>Total MRP</span><span class="totalprice">--</span> 
+      </div>
+      <div class="discount">
+        <span>Discount on MRP</span><span class="filldiscount">--</span> 
+     </div>
+
+     <div class="amount">
+        <span>Total Amount</span><span class="amount_pay">--</span> 
+     </div>
+     <p>Enter Promo Code </p>
+     <div class="promocode">
+         
+       <input type="text" id="promo" placeholder="MYNTRA300">
+       <div class="apply">Apply</div> 
+    </div>  
+
+      
+      
+    
+       <div class="makeorder">PLACE ORDER</div>   
+    </div>
+</div>
+    
+
+    <div class="wishlistlink">
+        <i class="fa-duotone fa-cart-flatbed"></i>
+   <a href="./whishlist.html"><p>Add More From Wishlist</p></a> 
+   
+   
+</div>
+
+
+</body>
+</html>
+<script>
+var cartarr = JSON.parse(localStorage.getItem("cartItems"))||[];
+// var cartarr1 = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+console.log(cartarr);
+      
+    var itemcount =cartarr.length;
+        localStorage.setItem("itemcount",itemcount)
+
+
+        let x=0;
+        let y=0;
+        // let z=0;
+
+           var discount1;
+
+    var MRP =  cartarr.forEach((el)=>{
+              console.log(el)
+            //   console.log(el.strikeoff);
+              x+= Number(el.strikeoff);
+              document.querySelector(".totalprice").innerText=x;
+              localStorage.setItem("MRP",x)
+              
+              y+= +el.price;
+              document.querySelector(".amount_pay").innerText= y;
+              localStorage.setItem("amount",y)
+
+             discount1=Number(x) - Number(y);
+            document.querySelector(".filldiscount").innerText= "- "+discount1;
+            localStorage.setItem("discount",discount1)
+        })
+            // console.log(sum,a,ind)
+        //   console.log(sum+= +(cartarr[ind].strikeoff.split(" ")[1])) 
+        // },0);
+         
+        // console.log(MRP)
+        
+        
+        
+        document.querySelector(".pricedets").innerText= `PRICE DETAILS ( ${itemcount} Items)`;
+
+
+        cartarr.forEach(function(ele,ind){
+
+        //   document.querySelector(".container").innerText = "" 
+        var box = document.createElement("div");
+            box.className ="main"
+            
+
+        var imgbox = document.createElement("div");
+            
+        var image =document.createElement("img");
+            image.src = ele.img;
+           imgbox.append(image)
+
+        var detailsbox = document.createElement("div");
+
+        var name =document.createElement("p");
+          name.innerText=ele.brand
+          name.style.fontSize="20px";
+          name.style.marginBottom ="-8px"
+
+
+        //  var para =document.createElement("p");
+        //   para.innerText=ele.para ;
+        //   para.style.color="gray"
+
+        var price = document.createElement("p");
+          price.innerText = ele.price;
+
+        var strikedprice = document.createElement("p");
+          strikedprice.innerText = ele.strikeoff;
+          strikedprice.style.textDecoration = "line-through";
+          strikedprice.style.color ="gray";
+
+
+        //  var offer = document.createElement("span");
+        //   offer.innerText =ele.offer;
+        //   offer.style.color="red";
+
+
+        var pricepara =document.createElement("p");
+          pricepara.append(price,strikedprice)
+          
+          detailsbox.append(name,pricepara)
+
+        var buttonbox = document.createElement("div");
+          
+        var remove =document.createElement("button");
+
+          remove.innerText ="REMOVE";
+          remove.addEventListener("click",function(){
+            removeitem(ind)
+          })
+
+          
+          
+          buttonbox.append (remove)
+          
+          
+          
+          box.append(imgbox,detailsbox,buttonbox)
+
+        document.querySelector(".container").append(box)
+
+        })
+
+        document.querySelector(".wishlistlink").addEventListener("click",sendtowish)
+        function sendtowish (){
+          window.location.reload();
+        }
+
+
+          function removeitem(ind){
+          cartarr.splice(ind,1);
+          localStorage.setItem("cartItems",JSON.stringify(cartarr))
+          window.location.reload();
+        }
+
+        document.querySelector(".makeorder").addEventListener("click",profile)
+
+        function profile(){
+          window.location.href="address.html";
+        }
+
+        document.querySelector(".apply").addEventListener("click",discountfun);
+
+        function discountfun(){
+
+        var payable_amount = +(localStorage.getItem("amount"));
+        var int_promo = document.querySelector("#promo").value;
+
+          if( payable_amount>300 && int_promo=="MYNTRA300")
+           {
+          y = y-300;
+           var discount2 =discount1+300;
+          localStorage.setItem("amount",y)  ;
+          localStorage.setItem("discount",discount2)
+          document.querySelector(".amount_pay").innerText= y;
+          document.querySelector(".filldiscount").innerText= "- "+discount2;
+
+          document.querySelector(".apply").removeEventListener("click",discountfun);
+           }
+            // console.log( amount, discount);
+        }
+
+document.getElementById('landingPage').addEventListener('click', function(){
+  window.location.reload();
+
+}) 
+
+document.querySelector("#second").addEventListener("click",function(){
+  window.location.reload();
+});
+
+
+
+</script>

@@ -229,7 +229,7 @@
         margin-bottom: 35px;
       }
 
-        @font-face {
+       @font-face {
     font-family: "Whitney";
     src: url("https://constant.myntassets.com/www/fonts/WhitneyHTF-Book.eot");
     src: url("https://constant.myntassets.com/www/fonts/WhitneyHTF-Book.eot?#iefix") format("embedded-opentype"),
@@ -597,6 +597,9 @@ sup {
     border: 1px solid red;
     padding: 9px 19px;
 }
+#btn > a{
+  color: red;
+}
 
 @media only screen and (min-width: 320px) and (max-width: 1300px) {
    
@@ -709,7 +712,7 @@ sup {
            <img src="images/Myntra_logo.png" alt="Myntra_logo"/> 
             
            <div id="men">
-              <a href="../myntra2/mens.html">MEN</a>
+              <a href="./mens.html">MEN</a>
               <div id="subMenu">
                  <ul>
                     <div class="categories">
@@ -813,7 +816,7 @@ sup {
            </div>
 
            <div id="women">
-              <a href="../myntra2/womens.html">WOMEN</a>
+              <a href="./womens.html">WOMEN</a>
               <div id="subMenu">
                  <ul>
                     <div class="categories">
@@ -1278,7 +1281,7 @@ sup {
 
         <div id="right">
            <div>
-              <img src="images/search_logo.png" alt="" />
+              <img src="../images/search_logo.png" alt="" />
               <input type="text" placeholder="Search for products, brands and more" />
            </div>
            <div class="rightSideIcons profile">
@@ -1289,7 +1292,7 @@ sup {
                     <li>
                        <h3>Welcome</h3>
                        <p>To access account and manage orders</p>
-                       <button id="btn" type="submit">LOGIN/SIGNUP</button>
+                       <button id="btn" type="submit"><a href="./signin.html">LOGIN/SIGNUP</a></button>
                     </li>
                     <hr />
                     <li>Order</li>
@@ -1307,11 +1310,11 @@ sup {
            </div>
            <div class="rightSideIcons">
               <img src="images/heart_logo.png" alt="" />
-              <label for="">Wishlist</label>
+              <a href="./wishlist.html"><label for="">Wishlist</label></a>
            </div>
            <div class="rightSideIcons bag">
               <img src="images/shopping_bag_logo.png" alt="" />
-              <label for="">Bag</label>
+              <a href="./bag.html"><label for="">Bag</label></a>
            </div>
         </div>
      </div>
